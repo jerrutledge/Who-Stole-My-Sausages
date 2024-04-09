@@ -18,12 +18,14 @@ jobs:
 
       - name: build game
         run: |
-          git clone https://github.com/tmedwards/tweego.git .
+          git clone https://github.com/tmedwards/tweego.git
+          cd tweego
           git checkout master
           go get
           go install
           go build
-          tweego "Who Stole My Sausages_.twee" -o dist/index.html
+          cd ..
+          ./tweego/tweego "Who Stole My Sausages_.twee" -o dist/index.html
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
