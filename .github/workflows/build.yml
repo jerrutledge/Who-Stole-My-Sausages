@@ -18,8 +18,11 @@ jobs:
 
       - name: build game
         run: |
-          go install github.com/tmedwards/tweego@latest
-          export PATH=$PATH:$(go env GOPATH)/bin
+          git clone https://github.com/tmedwards/tweego.git .
+          git checkout master
+          go get
+          go install
+          go build
           tweego "Who Stole My Sausages_.twee" -o dist/index.html
 
       - name: Setup Pages
@@ -27,5 +30,5 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Upload entire repository
+          # Upload directory
           path: './dist'
