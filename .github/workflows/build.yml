@@ -36,6 +36,7 @@ jobs:
 
       - name: build game
         run: |
+          mkdir dist
           ./tweego/tweego "Who Stole My Sausages_.twee" -o dist/index.html
 
       - name: Setup Pages
