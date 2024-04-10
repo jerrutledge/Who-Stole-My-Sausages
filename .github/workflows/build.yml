@@ -18,8 +18,11 @@ jobs:
 
       - name: Get sugarcube
         run: |
+          mkdir storyformats
+          cd storyformats
           curl -L https://github.com/tmedwards/sugarcube-2/releases/download/v2.36.1/sugarcube-2.36.1-for-twine-2.1-local.zip > sugarcube-2.zip
           unzip sugarcube-2.zip
+          cd ..
 
       - name: build tweego
         run: |
