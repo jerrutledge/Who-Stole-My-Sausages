@@ -16,7 +16,12 @@ jobs:
         with:
           go-version: '1.20'
 
-      - name: build game
+      - name: Get sugarcube
+        run: |
+          curl -L https://github.com/tmedwards/sugarcube-2/releases/download/v2.36.1/sugarcube-2.36.1-for-twine-2.1-local.zip > sugarcube-2.zip
+          unzip sugarcube-2.zip
+
+      - name: build tweego
         run: |
           git clone https://github.com/tmedwards/tweego.git
           cd tweego
@@ -25,6 +30,9 @@ jobs:
           go install
           go build
           cd ..
+
+      - name: build game
+        run: |
           ./tweego/tweego "Who Stole My Sausages_.twee" -o dist/index.html
 
       - name: Setup Pages
