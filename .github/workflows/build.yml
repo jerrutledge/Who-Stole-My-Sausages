@@ -63,6 +63,7 @@ jobs:
       - name: build game
         run: |
           mkdir dist
+          mv img dist/img
           ./tweego/tweego "output.twee" "sausage-script.js" "sausage-style.css" -o dist/index.html
 
       - name: Setup Pages

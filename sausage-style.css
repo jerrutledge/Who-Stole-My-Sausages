@@ -16,3 +16,8 @@
     height: 280px;
     overflow-y: auto;
 }
+
+body {
+    background-image: url("img/arturo-mockup.png");
+    background-size: cover;
+}
