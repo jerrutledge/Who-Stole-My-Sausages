@@ -15,9 +15,25 @@
     bottom: 10px;
     height: 280px;
     overflow-y: auto;
+    width: 800px;
+    background: darkblue;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media screen and (max-width: 1136px) {
+    #story {
+        width: 400px;
+    }
 }
 
 body {
     background-image: url("img/arturo-mockup.png");
     background-size: cover;
+}
+
+#passages {
+    padding: 36px;
 }
