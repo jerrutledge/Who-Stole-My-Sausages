@@ -17,7 +17,8 @@ Who Stole My Sausages?
 
 
 :: "Is everything okay?" {"position":"600,675","size":"100,100"}
-"WHO THE FUCK STOLE MY FUCKING [[SAUSAGES|Sausages]]?" 
+"WHO THE FUCK STOLE MY FUCKING Sausages?" 
+[[SAUSAGES|Sausages]]
 
 
 
@@ -56,7 +57,7 @@ Who Stole My Sausages?
 
 
 :: Don't cry [move-on] {"position":"1300,1175","size":"100,100"}
-<<if $dontcry is true>>"It's the principle!<</if>><<if $outrage is true>>"Right?<</if>> They were destined for greatness. I was going to make mash, casserole... [[toad in the hole]] $name, TOAD IN THE BLOODY HOLE."<<set $searchedtrash to true>>
+<<if $dontcry is true>>"It's the principle!<</if>><<if $outrage is true>>"Right?<</if>> They were destined for greatness. I was going to make mash, casserole... toad in the hole $name, TOAD IN THE BLOODY HOLE."<<set $searchedtrash to true>>
 
 <<if $searchedfridge is false>>[["Where were you keeping them?"|Fridge]]<</if>>
 <<if $searchedsink is false>>[["Have you checked the sink?"|Sink]]<</if>>
@@ -71,7 +72,7 @@ Who Stole My Sausages?
 
 
 :: Fridge [move-on] {"position":"800,800","size":"100,100"}
-"They were right here, on [[my shelf->Shelf]] in the fridge, clearly [[labelled->Label]] with my name. My cheese, my cherry tomatoes—all still here. Sausages—not a trace."<<set $searchedfridge to true>>
+"They were right here, on my shelf in the fridge, clearly labelled with my name. My cheese, my cherry tomatoes—all still here. Sausages—not a trace."<<set $searchedfridge to true>>
 
 <<if $searchedtrash is false>>[["Have you checked the trash?"|Trash]]<</if>>
 <<if $searchedsink is false>>[["Have you checked the sink?"|Sink]]<</if>>
@@ -85,7 +86,7 @@ Who Stole My Sausages?
 
 
 :: Justin's filthy butt mug {"position":"2175,800","size":"100,100"}
-"Justin refuses to use an ashtray, like a normal person. Just stuffs all his ciggy ends into this mug his dad gave him for his birthday. Then leaves it by the sink for someone else to [[deal with in the morning]].'' 
+"Justin refuses to use an ashtray, like a normal person. Just stuffs all his ciggy ends into this mug his dad gave him for his birthday. Then leaves it by the sink for someone else to deal with in the morning.'' 
 
 
 
@@ -160,9 +161,11 @@ Who Stole My Sausages?
 
 
 :: Sausage meat [move-on Clue] {"position":"1725,1050","size":"100,100"}
-"This is [[Richard's frying pan.|Richard's frying pan]] Right, he's now my prime suspect."<<set $searchedsink to true>>
+"This is Richard's frying pan. Right, he's now my prime suspect."<<set $searchedsink to true>>
 
 <<if $cluerichardsfryingpan is false>>''Clue remembered''<<set $cluerichardsfryingpan to true>><</if>>
+
+[[Richard's frying pan.|Richard's frying pan]]
 
 <<if $searchedfridge is false>>[["Where were you keeping the sausages?"|Fridge]]<</if>>
 <<if $searchedtrash is false>>[["Have you checked the trash?"|Trash]]<</if>>
@@ -170,7 +173,7 @@ Who Stole My Sausages?
 
 
 :: Sausages {"position":"600,800","size":"100,100"}
-"Yes, yes, my sausages! You know I don't go in for that sawdust-in-a-condom cheap shit. This was pack of eight, grade-A [[Cumberlands]] from [[Nicer Slice]]!" 
+"Yes, yes, my sausages! You know I don't go in for that sawdust-in-a-condom cheap shit. This was pack of eight, grade-A Cumberlands from Nicer Slice!" 
 
 [["Where were you keeping them?"|Fridge]]
 [["Have you checked the trash?"|Trash]] 
@@ -255,7 +258,7 @@ For Dialogue Jam 2024
 
 
 :: Trash search complete {"position":"1300,1050","size":"100,100"}
-"Look! Here's the [[packaging->packaging]]. They ate //all eight sausages//. Greedy fucker. Oh my poor sausages."
+"Look! Here's the packaging. They ate //all eight sausages//. Greedy fucker. Oh my poor sausages."
 
 [["Don't cry"|Don't cry][$dontcry to true; $outrage to false]]
 [["It's an outrage!"|Don't cry][$outrage to true; $dontcry to false]]
@@ -297,6 +300,6 @@ Added to clues
 
 
 :: toad in the hole {"position":"1450,1175","size":"100,100"}
-"I've //made// you toad in the hole. You cook the sausages in [[Yorkshire pudding]] batter, have it with gravy. God it's good."
+"I've //made// you toad in the hole. You cook the sausages in Yorkshire pudding batter, have it with gravy. God it's good."
 
 [["You were saying..."|Don't cry]]
