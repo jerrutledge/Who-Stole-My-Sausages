@@ -1,4 +1,17 @@
-li {
+#story li {
     display: inline-block;
 	margin: 10px;
+    padding: 5px;
+}
+
+#story li > a {
+    color: black;
+    text-decoration: none;
+}
+
+#story {
+    position: absolute;
+    bottom: 10px;
+    height: 280px;
+    overflow-y: auto;
 }
