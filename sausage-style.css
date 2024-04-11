@@ -2,6 +2,7 @@
     display: inline-block;
 	margin: 10px;
     padding: 5px;
+    background-color: darkgrey;
 }
 
 #story li > a {
