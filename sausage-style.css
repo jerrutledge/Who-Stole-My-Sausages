@@ -1,3 +1,4 @@
 li {
-    color: green;
+    display: inline-block;
+	margin: 10px;
 }
