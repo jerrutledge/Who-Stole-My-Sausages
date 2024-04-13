@@ -15,18 +15,7 @@
     bottom: 10px;
     height: 280px;
     overflow-y: auto;
-    width: 800px;
-    background: darkblue;
-    left: 0;
-    right: 0;
-    margin-left: auto !important;
-    margin-right: auto !important;
-}
-
-@media screen and (max-width: 1136px) {
-    #story {
-        width: 400px;
-    }
+    width: 100%;
 }
 
 body {
@@ -35,5 +24,38 @@ body {
 }
 
 #passages {
+    background-color: navy;
     padding: 36px;
+    width: 1200px;
+    margin: 0 auto;
 }
+
+/* small */
+@media screen and (max-width: 1400px) {
+    #passages {
+        width: 800px;
+    }
+}
+/* even smaller */
+@media screen and (max-width: 1136px) {
+    #passages {
+        width: 100%;
+    }
+}
+
+#ui-bar {
+    -webkit-transition: left .2s ease-in;
+    -o-transition: left .2s ease-in;
+    transition: all .2s ease-in;
+}
+
+#ui-bar.stowed {
+    background-color: transparent;
+    border-color: transparent;
+}
+
+#ui-bar.stowed #ui-bar-toggle {
+    border: 1px solid #444;
+    background-color: #444;
+}
+
