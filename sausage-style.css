@@ -10,7 +10,12 @@
     text-decoration: none;
 }
 
+#ui-bar.stowed~#story {
+    margin-left: 0;
+}
+
 #story {
+    margin-left: 0;
     position: absolute;
     bottom: 10px;
     height: 280px;
@@ -38,6 +43,10 @@ body {
 }
 /* even smaller */
 @media screen and (max-width: 1136px) {
+    #ui-bar.stowed~#story {
+        margin-left: 0;
+    }
+
     #passages {
         width: 100%;
     }
