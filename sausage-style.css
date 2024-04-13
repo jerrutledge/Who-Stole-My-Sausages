@@ -117,6 +117,7 @@ input, select, textarea {
 input:not(:disabled):focus, input:not(:disabled):hover, select:not(:disabled):focus, select:not(:disabled):hover, textarea:not(:disabled):focus, textarea:not(:disabled):hover {
     color: #222;
     background-color: transparent;
+    border-color: #222;
 }
 
 input[type=text] {
