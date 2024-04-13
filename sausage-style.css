@@ -8,6 +8,7 @@ body {
 
 #story li {
     display: inline-block;
+    margin: 10px;
 }
 
 #story li > a {
