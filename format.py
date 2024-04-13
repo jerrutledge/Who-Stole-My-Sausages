@@ -23,6 +23,9 @@ with open("Who Stole My Sausages_.twee") as infile:
             choices.append(line)
             continue
         # otherwise
+        if (line=="\n" and outputlines[-1] == "\n"):
+            # skip consecutive line breaks
+            continue
         outputlines.append(line)
 
 
