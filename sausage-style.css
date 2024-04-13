@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
 
+/* HIDES BACK AND FORWARD BUTTONS */
+#ui-bar-history {
+    /* display: none; */
+}
+
 body {
     background-image: url("img/arturo-mockup.png");
     background-size: cover;
@@ -50,6 +55,14 @@ body {
     bottom: 10px;
     height: 280px;
     width: 100%;
+}
+
+#story h1 {
+    margin: 0 0 .3em;
+}
+
+#passage-start h1 {
+    margin: 0 0 -.5em;
 }
 
 #passages {
