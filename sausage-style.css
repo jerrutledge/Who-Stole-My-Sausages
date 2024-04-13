@@ -31,6 +31,8 @@ body {
 .passage {
     padding: 0 2rem;
     font-size: 22px;
+    max-height: 280px;
+    overflow-y: auto;
 }
 
 .passage ol, .passage ul {
@@ -47,7 +49,6 @@ body {
     position: absolute;
     bottom: 10px;
     height: 280px;
-    overflow-y: auto;
     width: 100%;
 }
 
