@@ -1,13 +1,25 @@
 #story li {
     display: inline-block;
-	margin: 10px;
-    padding: 5px;
-    background-color: darkgrey;
 }
 
 #story li > a {
-    color: black;
+	margin: 10px;
+    padding: 5px;
+    background-color: darkgrey;
+    box-shadow: 20px 38px 34px -26px rgba(0, 0, 0, 0.2);
+    border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px;
+    border: solid 2px #41403E;
+    color: #41403E;
     text-decoration: none;
+}
+
+.passage {
+    padding: 0 2rem;
+}
+
+.passage ol, .passage ul {
+    margin-left: 0px;
+    padding-left: 0px;
 }
 
 #ui-bar.stowed~#story {
@@ -30,9 +42,12 @@ body {
 
 #passages {
     background-color: navy;
-    padding: 36px;
+    padding: 1rem 0px;
     width: 1200px;
     margin: 0 auto;
+    box-shadow: 20px 38px 34px -26px rgba(0, 0, 0, 0.2);
+    border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px;
+    border: solid 7px #41403E;
 }
 
 /* small */
