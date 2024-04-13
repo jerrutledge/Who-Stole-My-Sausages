@@ -23,12 +23,12 @@ with open("Who Stole My Sausages_.twee") as infile:
             choices.append(line)
             continue
         # otherwise
-        if (line.strip()=="\n" and (outputlines[-1]).strip() == "\n"):
+        if (line.strip(" ")=="\n"):
             # skip consecutive line breaks
             continue
         outputlines.append(line)
 
 
 
-with open(outfilename, mode="+a") as outfile:
+with open(outfilename, mode="w") as outfile:
     outfile.writelines(outputlines)
