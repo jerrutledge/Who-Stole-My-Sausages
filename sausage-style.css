@@ -19,7 +19,7 @@ body {
 #story li > a {
 	margin: 10px;
     padding: 7px;
-    background-color: #aaa;
+    background-color: #ccc;
     box-shadow: 20px 38px 34px -26px rgba(0, 0, 0, 0.2);
     border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px;
     border: solid 2px #41403E;
@@ -112,12 +112,14 @@ body {
 input, select, textarea {
     color: #222;
     background-color: transparent;
+    border-color: #444;
+    transition: background-color .2s ease-in;
 }
 
 input:not(:disabled):focus, input:not(:disabled):hover, select:not(:disabled):focus, select:not(:disabled):hover, textarea:not(:disabled):focus, textarea:not(:disabled):hover {
     color: #222;
-    background-color: transparent;
-    border-color: #222;
+    background-color: lightgoldenrodyellow;
+    border-color: #444;
 }
 
 input[type=text] {
