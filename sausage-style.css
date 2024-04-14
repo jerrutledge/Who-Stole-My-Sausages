@@ -70,6 +70,7 @@ body {
     color: #222;
     padding: 1rem 0px;
     width: 1200px;
+    max-width: 1200px;
     margin: 0 auto;
     box-shadow: 20px 38px 34px -26px rgba(0, 0, 0, 0.2);
     border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px;
