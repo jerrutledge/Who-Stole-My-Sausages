@@ -14,7 +14,8 @@ Who Stole My Sausages?
     "question-hub": "purple",
     "Challenge": "purple",
     "Success": "green",
-    "Fail": "red"
+    "Fail": "red",
+    "Needs-attention": "yellow"
   },
   "zoom": 1
 }
@@ -27,11 +28,12 @@ Who Stole My Sausages?
 <<if $backatmidnight is true>>[["Walk me through yesterday again"|What Sati did yesterday]]<</if>>
 
 
-:: "A temple of fried chicken..." {"position":"2950,4500","size":"100,100"}
-"Yes."
+:: "Ah, Lobes" {"position":"4900,3500","size":"100,100"}
+"Lobes? Tell me that's not his real name." 
 
-<<if $friedchicken is false>>[["And fried chicken ensures top focus?"|"Fried chicken ensures top focus?"]]<</if>>
-<<if $whataboutbeers is true>>[["Tell me again about last night"|"Tell me more about these refreshments"]]<</if>>
+<<if $noearlobes is true>>[["Nickname. He has no earlobes."]]<</if>>
+<<if $tipsy is true>>[[(Tipsy)"Says a guy called Quentin"]]<</if>>
+[["Did you notice anything else?"|Did Richard notice anything else]]
 
 
 :: "All seems to add up" {"position":"1650,2750","size":"100,100"}
@@ -70,11 +72,18 @@ Hope that's the last time you make me say all that. Like groundhog day up in her
 [["And if you fail?"]]
 
 
-:: "Because someone stole Eira's sausages" {"position":"2675,2875","size":"100,100"}
+:: "Because someone stole Eira's sausages" {"position":"2750,2850","size":"100,100"}
 "Oh! That is terrible news. She adores sausages."<<set $arturoknowscrime to true>>
 
 [["It's endearing"]]
 [["It's borderline obsessive"]]
+
+
+:: "Bit early for me." {"position":"4925,2625","size":"100,100"}
+"My creativity demands lubrication, and is no slave to the arbitary shackles of time." 
+
+[["Fair enough"]]
+[["Creativity demands it... sure"]]
 
 
 :: "Boat captain?" {"position":"3450,4125","size":"100,100"}
@@ -83,10 +92,31 @@ Hope that's the last time you make me say all that. Like groundhog day up in her
 [["And you were with no one else?"|"And no one else?"]]
 
 
+:: "Bottoms up!" {"position":"5050,2625","size":"100,100"}
+"Very good. It's Toodlepip, double-malt, aged 40 years. Gasoline for my creativity. Cheers!"<<set $tipsy to true>>
+
+[["Mmm, goes down smooth"]]
+[["I think I'd rather drink gasoline"]]
+
+
+:: "But you went to Bearly's last night" {"position":"5400,3375","size":"100,100"}
+"My //inspiration excursions// infuse the piece with lifeblood."
+
+[["You're not in the tent now"]]
+
+
 :: "Can we chat?" {"position":"3200,2500","size":"100,100"}
 "I, um... it is not the best time. I'm working on an assignment." 
 
 [["Is that our toaster?"]]
+
+
+:: "Comfort?" {"position":"5650,3875","size":"100,100"}
+"Exactly. Art is is not comfortable."
+
+<<if $whyrichardartpiece is false>>[["Why are you doing this?"]]<</if>>
+<<if $whatricharddoesintent is false>>[["What else do you do in the tent?"|"What do you do in there?"]]<</if>>
+[["Back to last night..."|What Richard did yesterday evening]]
 
 
 :: "Cool..." {"position":"3200,3125","size":"100,100"}
@@ -96,6 +126,12 @@ Hope that's the last time you make me say all that. Like groundhog day up in her
 <<if $doesarturostealfromkitchen is true>>[["Let's get on with my investigation"|Arturo investigation start]]<</if>>
 
 
+:: "Creativity demands it... sure" {"position":"5050,2750","size":"100,100"}
+"Ah, sarcasm. The last refuge of the witless."
+
+[["Anyway... I need to ask you some questions"|Need to ask Richard questions]]
+
+
 :: "Creepy" {"position":"3450,3250","size":"100,100"}
 "I miss... never mind."
 
@@ -103,16 +139,23 @@ Hope that's the last time you make me say all that. Like groundhog day up in her
 <<if $doesarturostealfromkitchen is true>>[["Let's get on with my investigation"|Arturo investigation start]]<</if>>
 
 
-:: "Did Arturo eat one?" {"position":"2025,4125","size":"100,100"}
+:: "Did Arturo eat one?" {"position":"2225,4175","size":"100,100"}
 "Nah. He's on some sort of weird study diet. I told him I was thinking about eating it and he talked me down off the ledge. Then I dummied it when he went to bed." 
 
 [["Was it hot?"]] 
 [["Did Fran eat one?"]]
 [["Did you enjoy it?"]]
-[["Let's recap once more"|Sati recap]]
+<<if $frantouchedplate is true>>[["Let's recap once more"|Sati recap]]</if>>
 
 
-:: "Did Fran eat one?" [Clue] {"position":"1900,4000","size":"100,100"}
+:: "Did Fran cook them?" {"position":"6225,3825","size":"100,100"}
+"You'll have to ask her about that."
+
+[["So Fran brings you food?"]]
+[["Let's review last night's events"|What Richard did yesterday evening]]
+
+
+:: "Did Fran eat one?" [Clue] {"position":"2100,4050","size":"100,100"}
 "Not that I saw. Like I said, she came in after we arrived. She clattered around with a plate on the counter, then left. Oh shit, maybe it was the sausage plate? I went over to get some water, and that's where I saw the lonely sausage."
 
 ''Statement remembered''<<set $frantouchedplate to true>>
@@ -123,7 +166,7 @@ Hope that's the last time you make me say all that. Like groundhog day up in her
 [["Let's recap once more"|Sati recap]]
 
 
-:: "Did you eat Eira's sausages?" [Clue] {"position":"2025,3875","size":"100,100"}
+:: "Did you eat Eira's sausages?" [Clue] {"position":"2225,3925","size":"100,100"}
 "No! I mean, okay, I ate //one//. I found it on a plate, sitting there all fat and greasy. It was the only one there. It looked abandoned, so I gave it a good home. I swear I didn't cook it, or the rest of them!"
 
 ''Statement remembered''<<set $cluesatiate1sausage to true>>
@@ -135,13 +178,13 @@ Hope that's the last time you make me say all that. Like groundhog day up in her
 
 
 
-:: "Did you enjoy it?" {"position":"2150,4000","size":"100,100"}
+:: "Did you enjoy it?" {"position":"2350,4050","size":"100,100"}
 "Fuck yeah! Urgh... look, I'm a vegetarian who loves meat. Love the smell. Love the texture. Love the taste. And taboo meat tastes even better. Oh god I'm awful." 
 
 [["Was it hot?"]] 
 [["Did Fran eat one?"]]
 [["Did Arturo eat one?"]]
-[["Let's recap once more"|Sati recap]]
+<<if $frantouchedplate is true>>[["Let's recap once more"|Sati recap]]</if>>
 
 
 :: "Do you know who ate Eria's sausages?" {"position":"850,3000","size":"100,100"}
@@ -150,14 +193,14 @@ Hope that's the last time you make me say all that. Like groundhog day up in her
 [["Back to square one"|Sati how can I help]]
 
 
-:: "Do you steal things from the kitchen often?" {"position":"2825,2750","size":"100,100"}
+:: "Do you steal things from the kitchen often?" {"position":"2900,2725","size":"100,100"}
 "Uh... well, no. Not //often//. Why are you asking this?"<<set $doesarturostealfromkitchen to true>>
 
 [["No reason"]]
 [["Because someone stole Eira's sausages"]]
 
 
-:: "Don't you get hungry?" {"position":"3075,4125","size":"100,100"}
+:: "Don't you get hungry?" {"position":"3125,4275","size":"100,100"}
 "Hunger is good for studying. When I am hungry physically, I am hungry for knowledge." 
 
 [["Sounds unhealthy"]]
@@ -172,7 +215,20 @@ Hope that's the last time you make me say all that. Like groundhog day up in her
 
 
 
-:: "Fried chicken ensures top focus?" {"position":"3075,4250","size":"100,100"}
+:: "Fair enough" {"position":"4925,2750","size":"100,100"}
+"Yes, it is //fair enough//, as you so eloquently put it."
+
+[["Anyway... I need to ask you some questions"|Need to ask Richard questions]]
+
+
+:: "For how long?" {"position":"5575,3250","size":"100,100"}
+"Around the clock. For as long at the art demands it."
+
+[["Here in your room..."]]
+[["But you went to Bearly's last night"]]
+
+
+:: "Fried chicken ensures top focus?" {"position":"3125,4400","size":"100,100"}
 "It is less about nutritional value, more about quantity and timing. And sometimes I like to let loose. It was a celebration, after all."<<set $friedchicken to true>>
 
 [["What were you celebrating?"]]
@@ -192,7 +248,32 @@ Hope that's the last time you make me say all that. Like groundhog day up in her
 <<if $doesarturostealfromkitchen is true>>[["Let's get on with my investigation"|Arturo investigation start]]<</if>>
 
 
-:: "How's the radio stuff going?" {"position":"2600,3625","size":"100,100"}
+:: "Here in your room..." {"position":"5400,3250","size":"100,100"}
+"Yes." 
+
+[["For how long?"]]
+[["But you went to Bearly's last night"]]
+
+
+
+:: "How do you know?" {"position":"5225,3625","size":"100,100"}
+"Ahem, well, on occasion I vacation to the isle of sobriety myself. Out of curiosity. And I've had the displeasure of sampling the Corona Sunbrew that Arturo was drinking. Piss water, really."<<set $islandofsobriety to true>>
+
+<<if $livemusic is false>>[["Why was it odd that Arturo drank 0% beer?"|"Why odd?"]]<</if>>
+<<if $livemusic is true>>[["Talk me through last night again"|What Richard did yesterday evening]]<</if>>
+
+
+
+
+:: "How do you uh, relieve yourself?" {"position":"5650,3625","size":"100,100"}
+"I have containers for waste disposal."<<set $howrichardrelieve to true>>
+
+[["Poop bags?"]]
+[["Piss bottles?"|"Poop bags?"]]
+
+
+
+:: "How's the radio stuff going?" {"position":"2775,3625","size":"100,100"}
 "Good, thank you. I thought you listened? I've moved on from cumbia in favour of merengue and vallenato. My audience has responded in a positive way."<<set $howgoesradio to true>>
 
 [["Uh... yeah, I listen"]]
@@ -200,11 +281,10 @@ Hope that's the last time you make me say all that. Like groundhog day up in her
 [["Your audience?"]]
 
 
-:: "Huh" {"position":"3075,4500","size":"100,100"}
+:: "Huh" {"position":"3125,4650","size":"100,100"}
 "Yes." 
 
-<<if $whataboutbeers is false>>[["What about the beers?"]]<</if>>
-<<if $whataboutbeers is true>>[["Tell me again about last night"|"Tell me more about these refreshments"]]<</if>>
+[["What about the beers?"]]
 
 
 :: "I could have told you that" {"position":"3075,3000","size":"100,100"}
@@ -227,14 +307,20 @@ Hope that's the last time you make me say all that. Like groundhog day up in her
 [["So what did you get up again?"|Sati recap]]
 
 
-:: "I need to talk to you, Richard" {"position":"200,2500","size":"100,100"}
-"Sleep. Later." 
+:: "I need to talk to you, Richard" {"position":"4550,2500","size":"100,100"}
+"..." 
 
 [["It's about your frying pan"|Entry denied]]
 [["It's about a terrible crime"|Entry denied]]
 
 
-:: "I'll catch it next time, promise" {"position":"2450,3750","size":"100,100"}
+:: "I think I'd rather drink gasoline" {"position":"5175,2875","size":"100,100"}
+"I suppose you'd much rather be drinking something inoffensive, more akin to your sensibilities. A lukewarm Molson, perhaps?"
+
+[["I need to ask you some questions"|Need to ask Richard questions]]
+
+
+:: "I'll catch it next time, promise" {"position":"2625,3750","size":"100,100"}
 "There is no need to promise just to please me. You must listen to the music that stirs your soul." 
 
 [["Back to what you did yesterday..."|What Arturo did yesterday]]
@@ -280,18 +366,31 @@ Hope that's the last time you make me say all that. Like groundhog day up in her
 [["Do you steal things from the kitchen often?"]]
 
 
-:: "It's borderline obsessive" {"position":"2675,3000","size":"100,100"}
+:: "It's almost midday" {"position":"4925,2500","size":"100,100"}
+"Ah, well, in that case. Whiskey?"
+
+[["Bit early for me."]] 
+[["Bottoms up!"]]
+
+
+:: "It's borderline obsessive" {"position":"2750,2975","size":"100,100"}
 "I appreciate obsession. It is how you solve difficult problems in the world."
 
 [["The problem of sausage apathy?"|Arturo must solve crime]]
 [["Yeah... me too"|Arturo must solve crime]]
 
 
-:: "It's endearing" {"position":"2800,3000","size":"100,100"}
+:: "It's endearing" {"position":"2875,2975","size":"100,100"}
 "Yes, I agree. She has a passion, and she's not afraid to hide it."
 
 [["A passion for sausage..."|Arturo must solve crime]]
 [["Yeah... go sausages!"|Arturo must solve crime]]
+
+
+:: "Make love? With who?' {"position":"5400,3750","size":"100,100"}
+"With //whom//? With my soulmate."
+
+[["Yourself?"]]
 
 
 :: "Maybe I've changed..." {"position":"3450,2875","size":"100,100"}
@@ -307,7 +406,19 @@ Hope that's the last time you make me say all that. Like groundhog day up in her
 <<if $doesarturostealfromkitchen is true>>[["Let's get on with my investigation"|Arturo investigation start]]<</if>>
 
 
-:: "No reason" {"position":"2800,2875","size":"100,100"}
+:: "Mmm, goes down smooth" {"position":"5175,2750","size":"100,100"}
+"Oh yes. The first one of the day always does."
+
+[["I need to ask you some questions"|Need to ask Richard questions]]
+
+
+:: "Nickname. He has no earlobes." {"position":"4775,3625","size":"100,100"}
+"How quaint." 
+
+[["Did you notice anything else?"|Did Richard notice anything else]]
+
+
+:: "No reason" {"position":"2875,2850","size":"100,100"}
 "...okay."
 
 [["I have some questions for you"|Arturo investigation start]]
@@ -321,7 +432,15 @@ Hope that's the last time you make me say all that. Like groundhog day up in her
 [["Not at all"|Sati how can I help]]
 
 
-:: "Nothing else to eat last night?" [Clue] {"position":"2950,4000","size":"100,100"}
+:: "None, I suppose" {"position":"5650,4000","size":"100,100"}
+"Exactly. Plus, I flush it all down the toilet anyway."
+
+<<if $whyrichardartpiece is false>>[["Why are you doing this?"]]<</if>>
+<<if $whatricharddoesintent is false>>[["What else do you do in the tent?"|"What do you do in there?"]]<</if>>
+[["Back to last night..."|What Richard did yesterday evening]]
+
+
+:: "Nothing else to eat last night?" [Clue] {"position":"3000,4150","size":"100,100"}
 <<if $arturoknowscrime is false>>"I find it curious that you are concerned about my eating habits.<</if>><<if $arturoknowscrime is true>>"This line of inquiry relates to the sausage robbery, no?"<</if>> No, only the crispy chicken tenders entered my mouth. I am observing a diet, actually."
 
 <<if $cluearturoonlyatechicken is false>>''Statement remembered''<</if>><<set $cluearturoonlyatechicken to true>>
@@ -330,11 +449,38 @@ Hope that's the last time you make me say all that. Like groundhog day up in her
 [["Don't you get hungry?"]]
 
 
-:: "Okay nerd" {"position":"3200,4375","size":"100,100"}
+:: "Okay nerd" {"position":"3250,4575","size":"100,100"}
 "Not the the first time I have been called 'nerd', and not the last. I accept your label, if it helps you to make sense of the world."
 
 <<if $whatkindofdiet is false>>[["So what kind of diet are you on?"|"What kind of diet?"]]<</if>>
 <<if $whatkindofdiet is true>>[["Tell me again about last night|"Tell me more about these refreshments"]]<</if>>
+
+
+:: "Poop bags?" {"position":"5650,3750","size":"100,100"}
+"There's no need for your disgust. What's the difference between my containers and a ceramic bowl?"
+
+[["Comfort?"]]
+[["Self-respect?"]]
+[["None, I suppose"]]
+
+
+:: "Postmodernism is fun" {"position":"5525,3750","size":"100,100"}
+"The enlightenment of human thought cannot concern itself with trivial notions such as //fun//."
+
+<<if $whatricharddoesintent is false>>[["What do you do in there?"]]<</if>>
+
+
+:: "Right on" {"position":"4925,3000","size":"100,100"}
+"Indeed."
+
+[["What did you get up to yesterday evening?"|What Richard did yesterday evening]]
+
+
+:: "Sausages cooked in your frying pan..." {"position":"6100,3700","size":"100,100"}
+"I wouldn't know anything about that. People use my things all the time. Not surprising—I'm the only one who actually respects the art of cooking. That cast-iron skillet is simply sublime." 
+
+[["So Fran brings you food?"]]
+[["Did Fran cook them?"]]
 
 
 :: "Sausages should just be called tubeforms" {"position":"1450,3125","size":"100,100"}
@@ -344,11 +490,26 @@ Hope that's the last time you make me say all that. Like groundhog day up in her
 [["Downer"|Sati how can I help]]
 
 
+:: "Self-respect?" {"position":"5775,3875","size":"100,100"}
+"I will ignore your ill-conceived attempt at humour." 
+
+<<if $whyrichardartpiece is false>>[["Why are you doing this?"]]<</if>>
+<<if $whatricharddoesintent is false>>[["What else do you do in the tent?"|"What do you do in there?"]]<</if>>
+[["Back to last night..."|What Richard did yesterday evening]]
+
+
 :: "Since when?" {"position":"3950,4625","size":"100,100"}
 "Since a few weeks ago. I did not want to tell you because... well, you know, our history. I thought it might be sensitive." 
 
 [["I'm happy for you, Arturo"]] 
 [["This hurts"]]
+
+
+:: "So Fran brings you food?" {"position":"6100,3825","size":"100,100"}
+"On ocassion, yes. She sees me suffer for my art."
+
+[["Did Fran cook them?"]]
+[["Let's review last night's events"|What Richard did yesterday evening]]
 
 
 :: "So did you see her eat meat?" {"position":"4475,4250","size":"100,100"}
@@ -359,12 +520,12 @@ Hope that's the last time you make me say all that. Like groundhog day up in her
 <<if $fromarturorecap is true>>[["Let's recap again"|Arturo recap]]<</if>>
 
 
-:: "So you were sober all night?" [Clue] {"position":"2950,4375","size":"100,100"}
-"Yes. My body is a temple."
+:: "So your art piece is jacking off in a tent in your room?" {"position":"5400,4000","size":"100,100"}
+"To the crude layperson, I suppose that's one interpretation."
 
-<<if $cluearturosober is false>>''Statement remembered''<</if>><<set $cluearturosober to true>>
-
-[["A temple of fried chicken..."]]
+<<if $whyrichardartpiece is false>>[["Why are you doing this?"]]<</if>>
+<<if $howrichardrelieve is false>>[["How do you relieve yourself?"|"How do you uh, relieve yourself?"]]<</if>>
+[["Back to last night..."|What Richard did yesterday evening]]
 
 
 :: "Someone ate Eira's sausages" {"position":"1100,2750","size":"100,100"}
@@ -381,7 +542,16 @@ Hope that's the last time you make me say all that. Like groundhog day up in her
 <<if $doesarturostealfromkitchen is true>>[["Let's get on with my investigation"|Arturo investigation start]]<</if>>
 
 
-:: "Sounds unhealthy" {"position":"3200,4250","size":"100,100"}
+:: "Sounds like a cop-out to me" {"position":"5525,3875","size":"100,100"}
+"It would be more of a //cop-out// to spoon-feed you with the tasteless gruel of 'meaning' to which you are so desperately addicted." 
+
+<<if $whatricharddoesintent is false>>[["What do you do in there?"]]<</if>>
+<<if $howrichardrelieve is false>>[["How do you relieve yourself?"|"How do you uh, relieve yourself?"]]<</if>>
+[["Back to last night..."|What Richard did yesterday evening]]
+
+
+
+:: "Sounds unhealthy" {"position":"3250,4400","size":"100,100"}
 "It works for me. What is your eat-study methodology?"
 
 [["Snack constantly"|Arturo surprised]]
@@ -413,7 +583,7 @@ Hope that's the last time you make me say all that. Like groundhog day up in her
 <<if $doesarturostealfromkitchen is true>>[["Let's get on with my investigation"|Arturo investigation start]]<</if>>
 
 
-:: "Tell me more about these refreshments" [Clue] {"position":"3075,3750","size":"100,100"}
+:: "Tell me more about these refreshments" [Clue] {"position":"3125,3900","size":"100,100"}
 "I went to Bearly's<<if $cluearturowithsati is true>> with Sati<</if>> for some beers and appetizers." 
 
 <<if $cluearturoatbearlys is false>>''Statement remembered''<</if>><<set $cluearturoatbearlys to true>>
@@ -425,7 +595,7 @@ Hope that's the last time you make me say all that. Like groundhog day up in her
 <<if $cluearturosober is true>>[["I think that's all for now"|Finish Arturo convo]]<</if>>
 
 
-:: "The, uh, weather report?" {"position":"2600,3875","size":"100,100"}
+:: "The, uh, weather report?" {"position":"2775,3875","size":"100,100"}
 "Unfortunately, we do not report on the weather during Arturo's Hora de Fuego. You must have mistaken my show for Cloud Coverage with Clara. She has a 15-minute weather guarantee." 
 
 [["Back to what you did yesterday..."|What Arturo did yesterday]]
@@ -445,7 +615,7 @@ Hope that's the last time you make me say all that. Like groundhog day up in her
 <<if $doesarturostealfromkitchen is true>>[["Let's get on with my investigation"|Arturo investigation start]]<</if>>
 
 
-:: "Uh... yeah, I listen" {"position":"2600,3750","size":"100,100"}
+:: "Uh... yeah, I listen" {"position":"2775,3750","size":"100,100"}
 "Okay, phew! What was your favourite part of yesterday's show?" 
 
 [["The, uh, weather report?"]]
@@ -453,19 +623,27 @@ Hope that's the last time you make me say all that. Like groundhog day up in her
 [["Your smooth voice"]]
 
 
-:: "Umm probably the merin-gee" {"position":"2725,3875","size":"100,100"}
+:: "Umm probably the merin-gee" {"position":"2900,3875","size":"100,100"}
 "I believe you refer to //merengue//. And if so, you have excellent taste." 
 
 [["Back to what you did yesterday..."|What Arturo did yesterday]]
 
 
-:: "Was it hot?" {"position":"2025,4000","size":"100,100"}
+:: "Wait... you were at Bearly's as well?" [Clue] {"position":"4900,3125","size":"100,100"}
+"Yes. I like to frequent local watering holes and observe the masses. I find it a fascinating exercise in understanding human behaviour. A challenging one, at that."<<set $richardatbearlys to true>>
+
+''Statement remembered''<<set $cluerichardatbearlys to true>>
+
+[["Were you there with Sati and Arturo?']]
+
+
+:: "Was it hot?" {"position":"2225,4050","size":"100,100"}
 "It wasn't cold... I'd say it was warm. Like, cat-belly warm."
 
 [["Did Fran eat one?"]]
 [["Did Arturo eat one?"]]
 [["Did you enjoy it?"]]
-[["Let's recap once more"|Sati recap]]
+<<if $frantouchedplate is true>>[["Let's recap once more"|Sati recap]]<</if>>
 
 
 
@@ -476,10 +654,18 @@ Hope that's the last time you make me say all that. Like groundhog day up in her
 <<if $doesarturostealfromkitchen is true>>[["Let's get on with my investigation"|Arturo investigation start]]<</if>>
 
 
-:: "What about the beers?" {"position":"2950,4250","size":"100,100"}
-"They were beers without alcohol, of the zero percent variety. The Corona brand is my preference."<<set $whataboutbeers to true>>
+:: "Were you there with Sati and Arturo?' {"position":"4900,3250","size":"100,100"}
+"Aha, no. I prefer to remain... clandestine. I occupied a dingy corner table from which I could enjoy a full view of the bar. I, however, see our dear housemates."
 
-[["So you were sober all night?"]]
+[["What did you notice about them?"]]
+
+
+
+
+:: "What about the beers?" {"position":"3000,4400","size":"100,100"}
+"I supped on Coronas with a lime wedge shoved down the neck."
+
+[["Tell me again about last night"|"Tell me more about these refreshments"]]
 
 
 :: "What did Sati eat?" {"position":"4225,3875","size":"100,100"}
@@ -488,10 +674,31 @@ Hope that's the last time you make me say all that. Like groundhog day up in her
 [["Anything else?"]]
 
 
-:: "What did you have to eat?" {"position":"2950,3875","size":"100,100"}
+:: "What did you have for dinner?" {"position":"5925,3125","size":"100,100"}
+"I did not eat. I am limited to the conditions of my art piece. If anyone deems it charitable to bring me sustenance, I shan't refuse." 
+
+[[(Challenge statement)|Challenge Richard did not eat]]
+<<if $richardartpieceexplain is false>>[["What is your art piece?"|"What is your latest piece?"]]
+[["Alright then, let's review"|What Richard did yesterday evening]]
+
+
+:: "What did you have to eat?" {"position":"3000,4025","size":"100,100"}
 "I ate some crispy chicken tenders with sauce for dipping. They were indeed crispy, and tender. I'm not sure about the chicken part though."<<set $whatarturoate to true>>
 
 [["Nothing else to eat last night?"]]
+
+
+:: "What did you notice about them?" {"position":"4900,3375","size":"100,100"}
+"Oh, they were engaged in the usual bar frivolities. Drinking, eating, cackling. They played pool with a rather scruffy sort, a man who insisted on wearing a captain's hat." 
+
+[["Ah, Lobes"]]
+[["Anything else?"|Did Richard notice anything else]]
+
+
+:: "What do you do in there?" {"position":"5400,3625","size":"100,100"}
+"I contemplate solitude. And make love."<<set $whatricharddoesintent to true>>
+
+[["Make love? With who?']]
 
 
 :: "What have you discovered?" {"position":"3200,2875","size":"100,100"}
@@ -508,7 +715,14 @@ Hope that's the last time you make me say all that. Like groundhog day up in her
 [["I did say that didn't I"]]
 
 
-:: "What kind of diet?" {"position":"2950,4125","size":"100,100"}
+:: "What is your latest piece?" {"position":"5400,3125","size":"100,100"}
+"I'm living in a tent."<<set $richardartpieceexplain to true>>
+
+[["Here in your room..."]]
+[["For how long?"]]
+
+
+:: "What kind of diet?" {"position":"3000,4275","size":"100,100"}
 "The diet is calibrated to ensure top focus for studying."<<set $whatkindofdiet to true>>
 
 [["Fried chicken ensures top focus?"]]
@@ -523,7 +737,7 @@ Hope that's the last time you make me say all that. Like groundhog day up in her
 <<if $fromarturorecap is true>>[["Let's recap again"|Arturo recap]]<</if>>
 
 
-:: "What were you celebrating?" [Clue] {"position":"3075,4375","size":"100,100"}
+:: "What were you celebrating?" [Clue] {"position":"3125,4525","size":"100,100"}
 "I... not celebrating, really. Well, celebrating a successful radio show."
 
 <<if $cluearturocelebrating is false>>''Statement remembered''<</if>><<set $cluearturocelebrating to true>>
@@ -550,6 +764,19 @@ Hope that's the last time you make me say all that. Like groundhog day up in her
 [["Which friend?"]]
 
 
+:: "Why are you doing this?" {"position":"5525,3625","size":"100,100"}
+"Meaning lies derives not from the mind of the //auteur//. Indeed, your attempts to derive meaning at all merely confirm the arbitary nature of knowledge itself."<<set $whyrichardartpiece to true>> 
+
+[["Postmodernism is fun"]]
+[["Sounds like a cop-out to me"]]
+
+
+:: "Why didn't you say that in the first place?" {"position":"4025,3400","size":"100,100"}
+"I thought that it was not pertinent to your investigation."
+
+[[(Sigh) "So let's recap"|Arturo recap]]
+
+
 :: "Why is it in pieces?" {"position":"3200,2750","size":"100,100"}
 "We have been tasked with designing a new feature to improve the standard toaster. I need to fully understand the inside workings of a toaster. For that, I have dismounted the toaster."<<set $whytoasterinpieces to true>>
 
@@ -569,6 +796,15 @@ Hope that's the last time you make me say all that. Like groundhog day up in her
 "Right on. Toot away my friend."<<set $stoned to true>>
 
 [[Toot toot|Sati how can I help]]
+
+
+:: "Why odd?" [Clue] {"position":"5075,3625","size":"100,100"}
+"Because you'd need to be drunk to appreciate the generic, east-coast acoustic guitar strangling that was happening on stage."<<set $livemusic to true>>
+
+''Statement remembered''<<set $cluerichardlivemusic to true>>
+
+<<if $islandofsobriety is false>>[["How do you know they were 0% beers?"|"How do you know?"]]<</if>>
+<<if $livemusic is true>>[["Talk me through last night again"|What Richard did yesterday evening]]<</if>>
 
 
 :: "Wouldn't you like to know" {"position":"1225,2750","size":"100,100"}
@@ -605,7 +841,15 @@ Hope that's the last time you make me say all that. Like groundhog day up in her
 <<if $doesarturostealfromkitchen is true>>[["Let's get on with my investigation"|Arturo investigation start]]<</if>>
 
 
-:: "Your audience?" {"position":"2725,3750","size":"100,100"}
+:: "You're not in the tent now" {"position":"5400,3500","size":"100,100"}
+"Yes, I had to attend to your incessant knocking."
+
+[["What do you do in there?"]]
+[["Why are you doing this?"]]
+[["How do you uh, relieve yourself?"]]
+
+
+:: "Your audience?" {"position":"2900,3750","size":"100,100"}
 "Yes. The producer says I am growing in popularity. I had an average of 23 listeners yesterday. They like my smooth voice and broad selection of Latinx bangers."
 
 [["Back to what you did yesterday..."|What Arturo did yesterday]]
@@ -620,10 +864,46 @@ Hope that's the last time you make me say all that. Like groundhog day up in her
 [["Uh... okay"|Sati how can I help]]
 
 
-:: "Your smooth voice" {"position":"2450,3875","size":"100,100"}
+:: "Your smooth voice" {"position":"2625,3875","size":"100,100"}
 "I have heard that a lot. In fact, the station manager told me that my audience love most my smooth voice, and broad selection of Latinx bangers."
 
 [["Back to what you did yesterday..."|What Arturo did yesterday]]
+
+
+:: "Yourself?" {"position":"5400,3875","size":"100,100"}
+"Naturally." 
+
+[["So your art piece is jacking off in a tent in your room?"]]
+
+
+:: (Tipsy)"Hit me with some poetry" {"position":"5400,2925","size":"100,100"}
+Harbourmaster
+landlocked slave 
+Port side
+whores cried
+Who can fathom
+the algae-smothered?<<set $richardpoem to true>>
+
+[["Inspired"|What Richard did yesterday evening]]
+[["Powerful"|What Richard did yesterday evening]]
+[["Huh"|What Richard did yesterday evening]]
+
+
+:: (Tipsy)"Pretentious. I meant pretentious." {"position":"4800,3000","size":"100,100"}
+"Do not mistake confidence for pretension. You're better than that. Or are you?" 
+
+[["What did you get up to yesterday evening?"|What Richard did yesterday evening]]
+
+
+:: (Tipsy)"Says a guy called Quentin" {"position":"4900,3625","size":"100,100"}
+
+
+
+:: (Tipsy)"Why are you the way you are?" {"position":"4925,2875","size":"100,100"}
+"I suppose I was born with a natural flair for the arts. My parents tell me that, at two, I would tear up colouring books and create grotesque collages from the pieces—deconstructing the form as toddlers everywhere comprehend it."
+
+[["Right on"]]
+[[(Tipsy)"Pretentious. I meant pretentious."]]
 
 
 :: (mutter) {"position":"3450,3000","size":"100,100"}
@@ -651,22 +931,32 @@ Hope that's the last time you make me say all that. Like groundhog day up in her
 [["Who to interview next..."|Who to interview]]
 
 
-:: Arturo ate chicken and nothing else [Challenge] {"position":"3925,2900","size":"100,100"}
+:: Arturo ate chicken and nothing else [Challenge] {"position":"3800,2900","size":"100,100"}
 You don't have any evidence to challenge that statement. Challenge another?
 
 [[Arturo was on the radio yesterday]]
 <<if $cluearturowithsati is false>>[[Challenge Arturo was alone]]<</if>>
-[[Arturo was sober]]
+[[Arturo drank Corona]]
 [["Actually, it all adds up"|All adds up Arturo]]
 
 
-:: Arturo investigation start {"position":"2775,3500","size":"100,100"}
+:: Arturo drank Corona [Challenge] {"position":"4025,2900","size":"100,100"}
+Whose statement will challenge what Arturo said: //that he drank Corona//?
+
+[[Eira|Eira's statements Arturo drank Corona]]
+<<if $spokentosati is true>>[[Sati|Sati's statements Arturo drank Corona]]<</if>>
+<<if $spokentorichard is true>>[[Richard|Richard's statements Arturo drank Corona]]<</if>>
+<<if $spokentofran is true>>[[Fran|Fran's statements Arturo drank Corona]]<</if>>
+[[Back|Challenge Arturo recap]]
+
+
+:: Arturo investigation start {"position":"2950,3500","size":"100,100"}
 "I will answer your questions. But I must return to my assignment soon." 
 
 [["What did you do yesterday evening?"|What Arturo did yesterday]]
 
 
-:: Arturo must solve crime {"position":"2675,3125","size":"100,100"}
+:: Arturo must solve crime {"position":"2750,3100","size":"100,100"}
 "I am guessing she must be sad... that hurts my heart."
 
 [["So help me with the investigation"|Arturo investigation start]]
@@ -675,7 +965,7 @@ You don't have any evidence to challenge that statement. Challenge another?
 
 
 :: Arturo recap {"position":"3625,2625","size":"100,100"}
-"I broadcast my radio show with success, then played pool at Bearly's with Lobes<<if $cluearturowithsati is true>> and Sati<</if>>. I consumed some crispy chicken tenders and zero percent Corona beers.<<if $cluearturowithsati is true>>Sati and<</if>> I walked home<<if $satieatsmeatwhenstoned is true>> where she confessed her urge to eat a pre-bed meat snack<</if>>. I slept for seven and a half hours."<<set $fromarturorecap to true>>
+"I broadcast my radio show with success, then played pool at Bearly's with Lobes<<if $cluearturowithsati is true>> and Sati<</if>>. I consumed some crispy chicken tenders and<<if $cluearturosober is true>> alcohol-free<</if>> Corona beers.<<if $cluearturowithsati is true>>Sati and<</if>> I walked home<<if $satieatsmeatwhenstoned is true>> where she confessed her urge to eat a pre-bed meat snack<</if>>. I slept for seven and a half hours."<<set $fromarturorecap to true>>
 
 <<if $cluearturowithsati is true and $satieatsmeatwhenstoned is false>>[["What did Sati eat?"]]<</if>>
 [[(Challenge statement)|Challenge Arturo recap]]
@@ -694,7 +984,7 @@ You don't have any evidence to challenge that statement. Challenge another?
 [["Can we chat?"]] 
 
 
-:: Arturo surprised {"position":"3325,4375","size":"100,100"}
+:: Arturo surprised {"position":"3375,4525","size":"100,100"}
 "You brain never fails to surprise me."
 
 <<if $whatkindofdiet is false>>[["So what kind of diet are you on?"|"What kind of diet?"]]<</if>>
@@ -706,16 +996,7 @@ You don't have any evidence to challenge that statement. Challenge another?
 
 <<if $cluearturowithsati is false>>[[Challenge Arturo was alone]]<</if>>
 [[Arturo ate chicken and nothing else]]
-[[Arturo was sober]]
-[["Actually, it all adds up"|All adds up Arturo]]
-
-
-:: Arturo was sober [Challenge] {"position":"3800,2900","size":"100,100"}
-You don't have any evidence to challenge that statement. Challenge another?
-
-[[Arturo was on the radio yesterday]]
-<<if $cluearturowithsati is false>>[[Challenge Arturo was alone]]<</if>>
-[[Arturo ate chicken and nothing else]]
+[[Arturo drank Corona]]
 [["Actually, it all adds up"|All adds up Arturo]]
 
 
@@ -728,7 +1009,31 @@ Which of Arturo's statements will challenge what Sati said: //that Arturo was wa
 <<if $cluearturocelebrating is true>>[[Arturo was celebrating something last night|Challenge Sati Arturo wasted fail]]<</if>>
 <<if $cluearturowithsati is true>>[[Arturo was with Sati last night|Challenge Sati Arturo wasted fail]]<</if>>
 <<if $satieatsmeatwhenstoned is true>>[[Sati eats meat when she's drunk and stoned|Challenge Sati Arturo wasted fail]]<</if>>
-[[Back|Challenge Sati Arturo was wasted]]
+[[Back|Challenge Sati is veggie path to success]]
+
+
+:: Arturo's statements Richard didn't eat [Challenge] {"position":"5800,3375","size":"100,100"}
+Which of Arturo's statements will challenge what Richard said: //that he didn't eat last night//?
+
+<<if $cluearturoatbearlys is true>>[[Arturo was at Bearly's|Challenge Richard didn't eat fail]]<</if>>
+<<if $cluearturoonlyatechicken is true>>[[Arturo ate crispy chicken tenders|Challenge Richard didn't eat fail]]<</if>>
+<<if $cluearturosober is true>>[[Arturo was completely sober last night|Challenge Richard didn't eat fail]]<</if>>
+<<if $cluearturocelebrating is true>>[[Arturo was celebrating something last night|Challenge Richard didn't eat fail]]<</if>>
+<<if $cluearturowithsati is true>>[[Arturo was with Sati last night|Challenge Richard didn't eat fail]]<</if>>
+<<if $satieatsmeatwhenstoned is true>>[[Sati eats meat when she's drunk and stoned|Challenge Richard didn't eat fail]]<</if>>
+[[Back|Challenge Richard did not eat]]
+
+
+:: Arturo's statements Richard not at Bearly's {"position":"2450,3350","size":"100,100"}
+Which of Arturo's statements will challenge what Sati said: //that Richard wasn't at Bearly's last night//?
+
+<<if $cluearturoatbearlys is true>>[[Arturo was at Bearly's|Challenge Sati Richard not at Bearly's fail]]<</if>>
+<<if $cluearturoonlyatechicken is true>>[[Arturo ate crispy chicken tenders|Challenge Sati Richard not at Bearly's fail]]<</if>>
+<<if $cluearturosober is true>>[[Arturo was completely sober last night|Challenge Sati Richard not at Bearly's fail]]<</if>>
+<<if $cluearturocelebrating is true>>[[Arturo was celebrating something last night|Challenge Sati Richard not at Bearly's fail]]<</if>>
+<<if $cluearturowithsati is true>>[[Arturo was with Sati last night|Challenge Sati Richard not at Bearly's fail]]<</if>>
+<<if $satieatsmeatwhenstoned is true>>[[Sati eats meat when she's drunk and stoned|Challenge Sati Richard not at Bearly's fail]]<</if>>
+[[Back|Challenge Sati Richard not at Bearly's]]
 
 
 :: Arturo's statements Sati is veggie [Challenge] {"position":"2150,3000","size":"100,100"}
@@ -791,14 +1096,29 @@ Whose statement will challenge what Arturo said: //that Sati was tempted by a pr
 [["What was this 'pre-bed meat snack'?"]]
 
 
+:: Challenge Arturo drank Corona fail [Fail] {"position":"4150,2900","size":"100,100"}
+"I do not see how that's relevant to what I said."
+
+[[(Challenge again)|Arturo drank Corona]]
+[["Let's recap again"|Arturo recap]]
+
+
+:: Challenge Arturo drank Corona success [Success Clue] {"position":"4025,3275","size":"100,100"}
+"Yes, you are correct. I drank the the alcohol-free variety, //Corona Sunbrew//. I was as sober as a convent nun."
+
+''Statement remembered''<<set $cluearturosober to true>>
+
+[["Why didn't you say that in the first place?"]]
+
+
 :: Challenge Arturo recap [Challenge] {"position":"3625,2750","size":"100,100"}
 Which part of the statement would you like to challenge? 
 
 [[Arturo was on the radio yesterday]]
 <<if $cluearturowithsati is false>>[[Arturo spent the evening with just Lobes|Challenge Arturo was alone]]<</if>>
 [[Arturo ate chicken and nothing else]]
-[[Arturo was sober]]
-[["Actually, it all adds up"|All adds up Arturo]]
+[[Arturo drank Corona]]
+[[Back|Arturo recap]]
 
 
 :: Challenge Arturo was alone [Challenge] {"position":"3575,4250","size":"100,100"}
@@ -828,6 +1148,31 @@ Whose statement will challenge what Arturo said: //that he spent the evening wit
 [["Why lie about it?"]]
 
 
+:: Challenge Richard did not eat [Challenge] {"position":"5925,3250","size":"100,100"}
+Whose statement will challenge what Richard said: //that he didn't eat last night//?
+
+[[Eira|Eira's statements Richard didn't eat]]
+<<if $spokentosati is true>>[[Sati|Sati's statements Richard didn't eat]]<</if>>
+<<if $spokentorichard is true>>[[Arturo|Arturo's statements Richard didn't eat]]<</if>>
+<<if $spokentofran is true>>[[Fran|Fran's statements Richard didn't eat]]<</if>>
+[[Back|"What did you have for dinner?"]]
+
+
+:: Challenge Richard didn't eat fail [Fail] {"position":"6050,3250","size":"100,100"}
+"Sorry, is this some attempt at a joke?"
+
+[[(Challenge again)|Challenge Richard did not eat]]
+<<if $fromarturorecap is false>>[["About last night's events..."|What Richard did yesterday evening]]<</if>>
+
+
+:: Challenge Richard didn't eat success [Success Clue] {"position":"6100,3575","size":"100,100"}
+"Alight—if you absolutely must know—I did eat last night. Frances brought me a couple of delightful sausages during the night, which I enjoyed while reading Ulysses." 
+
+''Statement remembered''<<set $francesbroughtrichardsausages to true>>
+
+[["Sausages cooked in your frying pan..."]]
+
+
 :: Challenge Sati Arturo was wasted [Challenge] {"position":"2025,3375","size":"100,100"}
 Whose statement will challenge what Sati said: //that Arturo was wasted last night//?
 
@@ -835,7 +1180,7 @@ Whose statement will challenge what Sati said: //that Arturo was wasted last nig
 <<if $spokentoarturo is true>>[[Arturo|Arturo's statements Arturo wasted]]<</if>>
 <<if $spokentorichard is true>>[[Richard|Richard's statements Arturo wasted]]<</if>>
 <<if $spokentofran is true>>[[Fran|Fran's statements Arturo wasted]]<</if>>
-[[Back|Challenge Sati recap]]
+[[Back|Challenge Sati is veggie path to success]]
 
 
 :: Challenge Sati Arturo wasted fail [Fail] {"position":"2150,3375","size":"100,100"}
@@ -844,8 +1189,43 @@ Whose statement will challenge what Sati said: //that Arturo was wasted last nig
 [[(Challenge again)|Challenge Sati Arturo was wasted]]
 
 
-:: Challenge Sati Arturo wasted success [Success] {"position":"2025,3750","size":"100,100"}
+:: Challenge Sati Arturo wasted path to success [Success] {"position":"2450,3100","size":"100,100"}
+"Hold up, hold up... how can Richard say that? He wasn't even there dude."
+
+[[(Challenge statement)|Challenge Sati Richard not at Bearly's]]
+[["Can't argue with that, let's recap"|Sati recap]]
+
+
+:: Challenge Sati Arturo wasted success [Success] {"position":"2225,3800","size":"100,100"}
 "Well, he... oh god $name, it's truuue! I'm a bad vegetarian. I only do it //sometimes//. I can't control my drunken urges."
+
+[["Did you eat Eira's sausages?"]] 
+
+
+:: Challenge Sati Richard not at Bearly's {"position":"2450,3225","size":"100,100"}
+Whose statement will challenge what Sati said: //that Richard wasn't at Bearly's last night//?
+
+[[Eira|Eira's statements Richard not at Bearly's]]
+<<if $spokentoarturo is true>>[[Arturo|Arturo's statements Richard not at Bearly's]]<</if>>
+<<if $spokentorichard is true>>[[Richard|Richard's statements  Richard not at Bearly's]]<</if>>
+<<if $spokentofran is true>>[[Fran|Fran's statements Richard not at Bearly's]]<</if>>
+[[Back|Challenge Sati Arturo wasted path to success]]
+
+
+:: Challenge Sati Richard not at Bearly's almost success {"position":"2325,3525","size":"100,100"}
+"He can say that all he wants. But I'm gonna need some proof." 
+
+[[(Challenge again)|Challenge Sati Richard not at Bearly's]]
+
+
+:: Challenge Sati Richard not at Bearly's fail [Fail] {"position":"2575,3100","size":"100,100"}
+"Uh... what? You're talking gibberish, dude." 
+
+[[(Challenge again)|Challenge Sati Richard not at Bearly's]]
+
+
+:: Challenge Sati Richard not at Bearly's success [Success] {"position":"2350,3800","size":"100,100"}
+"Oh shit, he //was// there. Well, he... oh god $name, it's all truuue! Arturo was sober, and I'm a bad vegetarian. I only //sometimes// eat met. I can't control my drunken urges."
 
 [["Did you eat Eira's sausages?"]] 
 
@@ -861,10 +1241,6 @@ Whose statement will challenge what Sati said: //that Arturo was wasted last nig
 
 [[(Challenge statement)|Challenge Sati Arturo was wasted]]
 [["I believe you, let's recap"|Sati recap]]
-
-
-
-
 
 
 :: Challenge Sati recap [Challenge] {"position":"1900,2750","size":"100,100"}
@@ -916,6 +1292,15 @@ Which part of Sati's statement would you like to challenge?
 [["Happy hunting!"]]
 
 
+:: Did Richard notice anything else [Clue] {"position":"5150,3500","size":"100,100"}
+"Hmm. They seemed to enjoy the live 'music'. Oh, and Arturo was drinking alcohol-free beer. Which struck me as odd."
+
+''Statement remembered''<<set: $cluerichardsawarturo0% to true>>
+
+[["Why odd?"]]
+[["How do you know?"]]
+
+
 :: Did Sati see anyone else [Clue] {"position":"825,3525","size":"100,100"}
 "Uh no. Wait... Fran came in. To tell us to keep the noise down. Then she left." 
 
@@ -949,11 +1334,21 @@ Which of Eira's statements will challenge what Arturo said: //that Sati was temp
 [[Back|Challenge Arturo Sati ate meat]]
 
 
+:: Eira's statements Arturo drank Corona {"position":"4025,3150","size":"100,100"}
+Which of Eira's statements will challenge what Arturo said: //that he drank Corona//?
+
+<<if $cluepackagingtorn is true>>[[The sausage packaging was sloppily torn into|Challenge Arturo drank Corona fail]]<</if>>
+<<if $cluelabelremoved is true>>[[The label that displayed Eira's name was removed from the packaging|Challenge Arturo drank Corona fail]]<</if>>
+<<if $cluerichardsfryingpan  is true>>[[It looks like sausage meat was stuck to the bottom of Richard's frying pan|Challenge Arturo drank Corona fail]]<</if>>
+<<if $cluerichardisnocturnal  is true>>[[Richard cooks his dinner late at night, long other the other housemates|Challenge Arturo drank Corona fail]]<</if>>
+[[Back|Arturo drank Corona]]
+
+
 :: Eira's statements Arturo was alone [Challenge] {"position":"3575,4375","size":"100,100"}
 Which of Eira's statements will challenge what Arturo said: //that he spent the evening with just Lobes//?
 
 <<if $cluepackagingtorn is true>>[[The sausage packaging was sloppily torn into|Challenge Arturo was alone fail]]<</if>>
-<<if $cluelabelremoved is true>>[[The label that displayed Eira's name was removed from the packaging||Challenge Arturo was alone fail]]<</if>>
+<<if $cluelabelremoved is true>>[[The label that displayed Eira's name was removed from the packaging|Challenge Arturo was alone fail]]<</if>>
 <<if $cluerichardsfryingpan  is true>>[[It looks like sausage meat was stuck to the bottom of Richard's frying pan|Challenge Arturo was alone fail]]<</if>>
 <<if $cluerichardisnocturnal  is true>>[[Richard cooks his dinner late at night, long other the other housemates|Challenge Arturo was alone fail]]<</if>>
 [[Back|Challenge Arturo was alone]]
@@ -966,7 +1361,27 @@ Which of Eira's statements will challenge what Sati said: //that Arturo was wast
 <<if $cluelabelremoved is true>>[[The label that displayed Eira's name was removed from the packaging|Challenge Sati Arturo wasted fail]]<</if>>
 <<if $cluerichardsfryingpan is true>>[[It looks like sausage meat was stuck to the bottom of Richard's frying pan|Challenge Sati Arturo wasted fail]]<</if>>
 <<if $cluerichardisnocturnal  is true>>[[Richard cooks his dinner late at night, long other the other housemates|Challenge Sati Arturo wasted fail]]<</if>>
-[[Back|Challenge Sati Arturo was wasted]]
+[[Back|Challenge Sati is veggie path to success]]
+
+
+:: Eira's statements Richard didn't eat [Challenge] {"position":"5925,3375","size":"100,100"}
+Which of Eira's statements will challenge what Richard said: //that he didn't eat last night//?
+
+<<if $cluepackagingtorn is true>>[[The sausage packaging was sloppily torn into|Challenge Richard didn't eat fail]]<</if>>
+<<if $cluelabelremoved is true>>[[The label that displayed Eira's name was removed from the packaging|Challenge Richard didn't eat fail]]<</if>>
+<<if $cluerichardsfryingpan  is true>>[[It looks like sausage meat was stuck to the bottom of Richard's frying pan|Challenge Richard didn't eat success]]<</if>>
+<<if $cluerichardisnocturnal  is true>>[[Richard cooks his dinner late at night, long other the other housemates|Challenge Richard didn't eat fail]]<</if>>
+[[Back|Challenge Richard did not eat]]
+
+
+:: Eira's statements Richard not at Bearly's {"position":"2575,3350","size":"100,100"}
+Which of Eira's statements will challenge what Sati said: /that Richard wasn't at Bearly's last night//?
+
+<<if $cluepackagingtorn is true>>[[The sausage packaging was sloppily torn into|Challenge Sati Richard not at Bearly's fail]]<</if>>
+<<if $cluelabelremoved is true>>[[The label that displayed Eira's name was removed from the packaging|Challenge Sati Richard not at Bearly's fail]]<</if>>
+<<if $cluerichardsfryingpan is true>>[[It looks like sausage meat was stuck to the bottom of Richard's frying pan|Challenge Sati Richard not at Bearly's fail]]<</if>>
+<<if $cluerichardisnocturnal  is true>>[[Richard cooks his dinner late at night, long other the other housemates|Challenge Sati Richard not at Bearly's fail]]<</if>>
+[[Back|Challenge Sati Richard not at Bearly's]]
 
 
 :: Eira's statements Sati is veggie [Challenge] {"position":"2025,3000","size":"100,100"}
@@ -979,14 +1394,20 @@ Which of Eira's statements will challenge what Sati said: //that no animal passe
 [[Back|Sati doesn't eat meat]]
 
 
-:: Entry denied {"position":"200,2625","size":"100,100"}
-[snoring]
+:: Entry denied {"position":"4550,2625","size":"100,100"}
+(snoring)
 
 [[I should interview someone else for now|Who to interview]]
 
 
 :: Finish Arturo convo {"position":"3425,2375","size":"100,100"}
 "I have enjoyed being the subject of your interrogation. But I am eager to return to my assignment. //Ciao!//" 
+
+[["Who to interview next..."|Who to interview]]
+
+
+:: Finish Richard convo {"position":"5200,2375","size":"100,100"}
+"I would say it's been a pleasure, but I abhor lying for the sake of politeness." 
 
 [["Who to interview next..."|Who to interview]]
 
@@ -1004,7 +1425,7 @@ Which of Eira's statements will challenge what Sati said: //that no animal passe
 [["Walk me through yesterday again"|What Sati did yesterday]]
 
 
-:: Fran start {"position":"4675,2375","size":"100,100"}
+:: Fran start {"position":"7925,2350","size":"100,100"}
 Fran is not in her room.
 
 [[I should interview someone else for now|Who to interview]]
@@ -1022,11 +1443,23 @@ You don't have any evidence to challenge that statement. Challenge another?
 
 
 
+:: Fran's statements Arturo drank Corona {"position":"3900,3025","size":"100,100"}
+
+
+
 :: Fran's statements Arturo was alone {"position":"3575,4500","size":"100,100"}
 
 
 
 :: Fran's statements Arturo wasted {"position":"1900,3500","size":"100,100"}
+
+
+
+:: Fran's statements Richard didn't eat {"position":"5925,3500","size":"100,100"}
+
+
+
+:: Fran's statements Richard not at Bearly's {"position":"2450,3475","size":"100,100"}
 
 
 
@@ -1092,7 +1525,7 @@ You don't have any evidence to challenge that statement. Challenge another?
 
 
 :: Lobes {"position":"1175,3525","size":"100,100"}
-"'Cause he's got no earlobes. Obviously."
+"'Cause he's got no earlobes. Obviously."<<set $noearlobes to true>>
 
 [["I hate that guy"|Hate Lobes]]
 [["What a legend!"|Love Lobes]]
@@ -1134,6 +1567,13 @@ You don't have any evidence to challenge that statement. Challenge another?
 <<if $whosatiwaswith is true>>[["Walk me through yesterday again"|What Sati did yesterday]]<</if>>
 
 
+:: Need to ask Richard questions {"position":"5050,2875","size":"100,100"}
+"And I shall answer them. If, of course, they're the right questions."
+
+[["What did you get up to yesterday evening?"|What Richard did yesterday evening]]
+<<if $tipsy is true>>[[(Tipsy)"Why are you the way you are?"]]<</if>>
+
+
 :: Nicer Slice {"position":"475,800","size":"100,100"}
 "Jesus $name yes, Nicer Slice. We've been there together, remember? That time we got the beef for the Argentinians? Best butcher's in town, hands down. God, to think that I go out of my way to pay for proper meat only for some THIEF to snatch it away from me." 
 
@@ -1155,10 +1595,16 @@ You don't have any evidence to challenge that statement. Challenge another?
 [["It is kind of perfect..."|Investigator][$kindofperfect to true]]
 
 
-:: Richard start {"position":"200,2375","size":"100,100"}
+:: Richard false start {"position":"4550,2375","size":"100,100"}
 "Huh? Whachuwant?"
 
 [["I need to talk to you, Richard"]]
+
+
+:: Richard start {"position":"4925,2375","size":"100,100"}
+"Why must we talk at this god-awful hour."<<set $spokentorichard to true>>
+
+[["It's almost midday"]]
 
 
 :: Richard's frying pan [Clue] {"position":"1850,1050","size":"100,100"}
@@ -1169,16 +1615,42 @@ You don't have any evidence to challenge that statement. Challenge another?
 [["You were saying..."|Sausage meat]]
 
 
+:: Richard's statements  Richard not at Bearly's [Needs-attention] {"position":"2325,3350","size":"100,100"}
+Which of Richard's statements will challenge what Sati said: //that Richard wasn't at Bearly's last night//?
+
+<<if $cluerichardsawarturo0% is true>>[[Arturo was drinking alcohol-free Coronas|Challenge Sati Richard not at Bearly's fail]]<</if>>
+<<if $cluerichardatbearlys is true>>[[Richard was at Bearly's last night|Challenge Sati Richard not at Bearly's almost success]]<</if>>
+<<if $cluerichardlivemusic is true>>[[Richard listened to 'generic, east-coast acoustic guitar strangling' at Bearly's|Challenge Sati Richard not at Bearly's success]]<</if>>
+<<if $francesbroughtrichardsausages is true>>[[Fran brought sausages to Richard's room last night|Challenge Sati Richard not at Bearly's fail]]<</if>>
+[[Back|Challenge Sati Richard not at Bearly's]]
+
+
 :: Richard's statements Arturo Sati ate meat {"position":"4100,4250","size":"100,100"}
 
+
+
+:: Richard's statements Arturo drank Corona [Needs-attention] {"position":"4150,3025","size":"100,100"}
+Which of Richard's statements will challenge what Arturo said: //that he drank Corona//?
+
+<<if $cluerichardsawarturo0% is true>>[[Arturo was drinking alcohol-free Coronas|Challenge Arturo drank Corona success]]<</if>>
+<<if $cluerichardatbearlys is true>>[[Richard was at Bearly's last night|Challenge Arturo drank Corona fail]]<</if>>
+<<if $cluerichardlivemusic is true>>[[Richard listened to 'generic, east-coast acoustic guitar strangling' at Bearly's|Challenge Arturo drank Corona fail]]<</if>>
+<<if $francesbroughtrichardsausages is true>>[[Fran brought sausages to Richard's room last night|Challenge Arturo drank Corona fail]]<</if>>
+[[Back|Arturo drank Corona]]
 
 
 :: Richard's statements Arturo was alone {"position":"3450,4375","size":"100,100"}
 
 
 
-:: Richard's statements Arturo wasted {"position":"2150,3500","size":"100,100"}
+:: Richard's statements Arturo wasted [Needs-attention] {"position":"2150,3500","size":"100,100"}
+Which of Richard's statements will challenge what Sati said: //that Arturo was wasted last night//?
 
+<<if $cluerichardsawarturo0% is true>>[[Arturo was drinking alcohol-free Coronas|Challenge Sati Arturo wasted path to success]]<</if>>
+<<if $cluerichardatbearlys is true>>[[Richard was at Bearly's last night|Challenge Sati Arturo wasted fail]]<</if>>
+<<if $cluerichardlivemusic is true>>[[Richard listened to 'generic, east-coast acoustic guitar strangling' at Bearly's|Challenge Sati Arturo wasted fail]]<</if>>
+<<if $francesbroughtrichardsausages is true>>[[Fran brought sausages to Richard's room last night|Challenge Sati Arturo wasted fail]]<</if>>
+[[Back|Challenge Sati is veggie path to success]]
 
 
 :: Richard's statements Sati is veggie {"position":"2025,3125","size":"100,100"}
@@ -1258,6 +1730,17 @@ Which of Sati's statements will challenge what Arturo said: //that Sati was temp
 [[Back|Challenge Arturo Sati ate meat]]
 
 
+:: Sati's statements Arturo drank Corona {"position":"4025,3025","size":"100,100"}
+Which of Sati's statements will challenge what Arturo said: //that he drank Corona//?
+
+<<if $cluesatiatbearlys is true>>[[Sati was at Bearly's yesterday evening, playing pool|Challenge Arturo drank Corona fail]]<</if>> 
+<<if $cluesativegetarian is true>>[[Sati is a vegetarian|Challenge Arturo drank Corona fail]]<</if>> 
+<<if $cluesatibackatone is true>>[[Sati got back to the house around midnight|Challenge Arturo drank Corona fail]]<</if>>
+<<if $cluesatiwitharturo is true>>[[Sati was with Arturo all evening|Challenge Arturo drank Corona fail]]<</if>>
+<<if $cluefraninkitchen is true>>[[Sati saw Fran come in and out of the kitchen|Challenge Arturo drank Corona fail]]<</if>>
+[[Back|Arturo drank Corona]]
+
+
 :: Sati's statements Arturo was alone [Challenge] {"position":"3700,4375","size":"100,100"}
 Which of Sati's statements will challenge what Arturo said: //that he spent the evening with just Lobes//?
 
@@ -1267,6 +1750,17 @@ Which of Sati's statements will challenge what Arturo said: //that he spent the 
 <<if $cluesatiwitharturo is true>>[[Sati was with Arturo all evening|Challenge Arturo was alone success]]<</if>>
 <<if $cluefraninkitchen is true>>[[Sati saw Fran come in and out of the kitchen|Challenge Arturo was alone fail]]<</if>>
 [[Back|Challenge Arturo was alone]]
+
+
+:: Sati's statements Richard didn't eat [Challenge] {"position":"6050,3375","size":"100,100"}
+Which of Sati's statements will challenge what Richard said: //that he didn't eat last night//?
+
+<<if $cluesatiatbearlys is true>>[[Sati was at Bearly's yesterday evening, playing pool|Challenge Richard didn't eat fail]]<</if>> 
+<<if $cluesativegetarian is true>>[[Sati is a vegetarian|Challenge Richard didn't eat fail]]<</if>> 
+<<if $cluesatibackatone is true>>[[Sati got back to the house around 1am|Challenge Richard didn't eat fail]]<</if>>
+<<if $cluesatiwitharturo is true>>[[Sati was with Arturo all evening|Challenge Richard didn't eat fail]]<</if>>
+<<if $cluefrankitchenwithplatesoneam is true>>[[Sati saw Fran coming in and out of the kitchen carrying plates|Challenge Richard didn't eat fail]]<</if>>
+[[Back|Challenge Richard did not eat]]
 
 
 :: Sausage meat [Clue] {"position":"1725,1050","size":"100,100"}
@@ -1346,6 +1840,7 @@ For Dialogue Jam 2024
 <<set $whosatiwaswith to false>>
 <<set $satispendstimewitharturo to false>>
 <<set $backatmidnight to false>>
+<<set $noearlobes to false>>
 
 /*Arturo dialogue options */
 <<set $arturoknowscrime to false>>
@@ -1357,10 +1852,20 @@ For Dialogue Jam 2024
 <<set $whatarturoate to false>>
 <<set $whoarturowaswith to false>>
 <<set $howgoesradio to false>>
-<<set $whataboutbeers to false>>
+
+/*Richard dialogue options */
+<<set $richardatbearlys to false>>
+<<set $islandofsobriety to false>>
+<<set $livemusic to false>>
+<<set $richardartpieceexplain to false>> 
+<<set $whatricharddoesintent to false>> 
+<<set $whyrichardartpiece to false>> 
+<<set $howrichardrelieve to false>>
+<<set $richardpoem to false>>
 
 /* Player states */
 <<set $stoned to false>>
+<<set $tipsy to false>>
 
 /* Crime scene clues */
 <<set $cluepackagingtorn to false>>
@@ -1384,6 +1889,12 @@ For Dialogue Jam 2024
 <<set $cluearturocelebrating to false>>
 <<set $cluearturowithsati to false>>
 <<set $satieatsmeatwhenstoned to false>>
+
+/* Richard clues */
+<<set $cluerichardsawarturo0% to false>>
+<<set $cluerichardatbearlys to false>>
+<<set $cluerichardlivemusic to false>>
+<<set $francesbroughtrichardsausages to false>>
 
 /* Origin points  */
 <<set $fromarturorecap to false>>
@@ -1427,12 +1938,23 @@ For Dialogue Jam 2024
 
 
 
-:: What Arturo did yesterday {"position":"2775,3625","size":"100,100"}
+:: What Arturo did yesterday {"position":"2950,3625","size":"100,100"}
 "I worked at the college radio during my regular broadcast time. Then I went out for some refreshments." 
 
 <<if $howgoesradio is false>>[["How's the radio stuff going?"]]<</if>>
 [["Tell me more about these refreshments"]]
 <<if $cluearturosober is true>>[["I think that's all for now"|Finish Arturo convo]]<</if>>
+
+
+:: What Richard did yesterday evening {"position":"5150,3000","size":"100,100"}
+"In the evening went to Bearly's House of Blues and Ribs to write poetry. Then I returned home to work on my latest piece."
+
+<<if $richardatbearlys is false>>[["Wait... you were at Bearly's as well?"]]<</if>>
+<<if $francesbroughtrichardsausages is false>>[["What did you have for dinner?"]]<</if>>
+<<if $richardartpieceexplain is false>>[["What is your latest piece?"]]<</if>>
+<<if $tipsy is true and $richardpoem is false>>[[(Tipsy)"Hit me with some poetry"]]<</if>>
+<<if $richardatbearlys is true>>[["I'll leave you to your 'art'..."|Finish Richard convo]]<</if>>
+
 
 
 :: What Sati ate at Bearly's {"position":"1450,3275","size":"100,100"}
@@ -1497,7 +2019,8 @@ For Dialogue Jam 2024
 :: Who to interview {"position":"2375,2050","size":"100,100"}
 //Which housemate should I interview?//
 
-[[Richard|Richard start]]
+<<if $spokentosati is false and $spokentoarturo is false>>[[Richard|Richard false start]]</if>>
+<<if $spokentosati is true and $spokentoarturo is true>>[[Richard|Richard start]]</if>>
 <<if $spokentosati is false>>[[Sati|Sati start]]<</if>>
 <<if $spokentosati is true>>[[Sati|Sati resume]]<</if>>
 <<if $spokentoarturo is false>>[[Arturo|Arturo start]]<</if>>
