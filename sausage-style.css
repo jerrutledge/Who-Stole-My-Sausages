@@ -126,3 +126,34 @@ input:not(:disabled):focus, input:not(:disabled):hover, select:not(:disabled):fo
 input[type=text] {
     min-width: 10em;
 }
+
+
+/* Custom Backgrounds/Foregrounds */
+body.bg-kitchen {
+    background-image: url(img/Kitchen.png);
+}
+body.bg-sati-room {
+    background-image: url(img/Sati_Room.png);
+}
+body.bg-arturo-room {
+    background-image: url(img/Arturo_Room.png);
+}
+body.bg-richard-room {
+    background-image: url(img/Richard_Room.png);
+}
+
+body.char-eira #foreground {
+    background-image: url(img/Person.png);
+}
+body.char-sati #foreground {
+    background-image: url(img/Person.png);
+}
+body.char-arturo #foreground {
+    background-image: url(img/Person.png);
+}
+body.char-richard #foreground {
+    background-image: url(img/Person.png);
+}
+body.char-fran #foreground {
+    background-image: url(img/Person.png);
+}
