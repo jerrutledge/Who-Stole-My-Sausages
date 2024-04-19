@@ -5,7 +5,7 @@
     /* display: none; */
 }
 
-html, 
+html,
 body {
     height: 100%;
     font-family: "Patrick Hand", cursive;
@@ -13,7 +13,9 @@ body {
 
 body {
     background-image: url("img/Kitchen.png");
-    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
 }
 
 #story li {
@@ -21,8 +23,8 @@ body {
     margin: 10px;
 }
 
-#story li > a {
-	margin: 10px;
+#story li>a {
+    margin: 10px;
     padding: 7px;
     background-color: #ccc;
     box-shadow: 20px 38px 34px -26px rgba(0, 0, 0, 0.2);
@@ -33,7 +35,7 @@ body {
     transition: all .2s ease-in;
 }
 
-#story li > a:hover {
+#story li>a:hover {
     background-color: lightgoldenrodyellow;
     box-shadow: 20px 38px 34px -26px rgba(0, 0, 0, 0.2);
 }
@@ -45,7 +47,8 @@ body {
     overflow-y: auto;
 }
 
-.passage ol, .passage ul {
+.passage ol,
+.passage ul {
     margin-left: 0px;
     padding-left: 0px;
 }
@@ -88,6 +91,7 @@ body {
         width: 800px;
     }
 }
+
 /* even smaller */
 @media screen and (max-width: 1136px) {
     #ui-bar.stowed~#story {
@@ -115,14 +119,21 @@ body {
     background-color: #444;
 }
 
-input, select, textarea {
+input,
+select,
+textarea {
     color: #222;
     background-color: transparent;
     border-color: #444;
     transition: background-color .2s ease-in;
 }
 
-input:not(:disabled):focus, input:not(:disabled):hover, select:not(:disabled):focus, select:not(:disabled):hover, textarea:not(:disabled):focus, textarea:not(:disabled):hover {
+input:not(:disabled):focus,
+input:not(:disabled):hover,
+select:not(:disabled):focus,
+select:not(:disabled):hover,
+textarea:not(:disabled):focus,
+textarea:not(:disabled):hover {
     color: #222;
     background-color: lightgoldenrodyellow;
     border-color: #444;
@@ -137,28 +148,41 @@ input[type=text] {
 body.bg-kitchen {
     background-image: url(img/Kitchen.png);
 }
+
 body.bg-sati-room {
     background-image: url(img/Sati_Room.png);
 }
+
 body.bg-arturo-room {
     background-image: url(img/Arturo_Room.png);
 }
+
 body.bg-richard-room {
     background-image: url(img/Richard_Room.png);
+}
+
+#foreground {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
 }
 
 body.char-eira #foreground {
     background-image: url(img/Person.png);
 }
+
 body.char-sati #foreground {
     background-image: url(img/Person.png);
 }
+
 body.char-arturo #foreground {
     background-image: url(img/Person.png);
 }
+
 body.char-richard #foreground {
     background-image: url(img/Person.png);
 }
+
 body.char-fran #foreground {
     background-image: url(img/Person.png);
 }
