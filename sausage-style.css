@@ -5,10 +5,15 @@
     /* display: none; */
 }
 
+html, 
 body {
-    background-image: url("img/arturo-mockup.png");
-    background-size: cover;
+    height: 100%;
     font-family: "Patrick Hand", cursive;
+}
+
+body {
+    background-image: url("img/Kitchen.png");
+    background-size: cover;
 }
 
 #story li {
