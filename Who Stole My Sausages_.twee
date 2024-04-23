@@ -21,7 +21,7 @@ Who Stole My Sausages?
 }
 
 :: StoryMenu
-[[Profanity Filter]]
+<a id="settings_storymenu">Settings</a>
 
 
 :: "A bit worse for wear" {"position":"6875,2525","size":"100,100"}
