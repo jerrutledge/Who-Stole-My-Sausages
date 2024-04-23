@@ -162,6 +162,10 @@ body.bg-richard-room {
     background-image: url(img/Richard_Room.png);
 }
 
+body.bg-door {
+    background-image: url(img/Door.png);
+}
+
 #foreground {
     background-repeat: no-repeat;
     background-attachment: fixed;
