@@ -21,7 +21,9 @@ Who Stole My Sausages?
 }
 
 :: StoryMenu
-<a id="settings_storymenu">Settings</a>
+<<link "Settings" >>
+  <<run window.on_click_settings()>>
+<</link>>
 
 
 :: "A bit worse for wear" {"position":"6875,2525","size":"100,100"}
