@@ -20,7 +20,7 @@ window.on_click_settings = function() {
 
     var label = document.createElement('label');
     label.setAttribute('for', 'profanity_checkbox');
-    label.innerHTML = "Enable profanity?";
+    label.innerHTML = "Profanity";
     content.appendChild(label);
 
     Dialog.append(content);
