@@ -12,7 +12,7 @@ body {
 }
 
 body {
-    background-image: url("img/Kitchen.png");
+    background-image: none;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
