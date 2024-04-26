@@ -1,3 +1,4 @@
+import os
 import re
 
 outfilename = "output.twee"
@@ -32,3 +33,21 @@ with open("Who Stole My Sausages_.twee") as infile:
 
 with open(outfilename, mode="w") as outfile:
     outfile.writelines(outputlines)
+
+imgnames = [os.path.join(dirpath,f)[2:] for (dirpath, dirnames, filenames) in os.walk("./img") for f in filenames]
+imgnames = str(imgnames) + ";"
+
+
+# Read contents from file as a single string
+file_handle = open("sausage-script.js", 'r')
+file_string = file_handle.read()
+file_handle.close()
+
+# Use RE package to allow for replacement (also allowing for (multiline) REGEX)
+file_string = (re.sub("\[\]; // image list is replaced in python script", imgnames, file_string))
+
+# Write contents to file.
+# Using mode 'w' truncates the file.
+file_handle = open("new-sausage-script.js", 'w')
+file_handle.write(file_string)
+file_handle.close()

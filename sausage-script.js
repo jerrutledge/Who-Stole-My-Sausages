@@ -28,3 +28,31 @@ window.on_click_settings = function() {
 
     return false;
 }
+
+
+function preloader() {
+    console.log("preloader activated...");
+	if (document.images) {
+        var imglist = []; // image list is replaced in python script
+        for (let i = 0; i < imglist.length; i++) {
+            const img = new Image();
+            img.src = imglist[i];
+            console.log("preloaded "+imglist[i]);
+        }
+	}
+    console.log("preloader finished.");
+}
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(preloader);
