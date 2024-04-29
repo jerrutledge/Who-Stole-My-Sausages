@@ -78,7 +78,7 @@ Hope that's the last time you make me say all that. Like groundhog day up in her
 :: "And the windows were open because...?" [Clue bg-sati-room char-sati] {"position":"2025,4175","size":"100,100"}
 "To let the smoke out, I think Fran had just fried something up before we got back. Now that I think about it, she was clattering around with plates too. She hustled out of there as soon as we arrived."
 
-''Clue remembered''<<set $cluefransmoke to true>>
+''Statement remembered''<<set $cluefransmoke to true>>
 
 <<if $askedsausagehot is false>>[["How hot was the sausage you ate?"|"Was it hot?"]]<</if>>
 <<if $askeddidsatienjoysausage is false>>[["Did you enjoy it?"]]<</if>>
