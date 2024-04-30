@@ -162,8 +162,8 @@ body.bg-arturo-room {
     background-image: url(img/Arturo_Room.png);
 }
 
-body.bg-richard-room {
-    background-image: url(img/Richard_Room.png);
+body.bg-quentin-room {
+    background-image: url(img/Quentin_Room.png);
 }
 
 body.bg-fran-door {
@@ -196,7 +196,7 @@ body.char-arturo #foreground {
     background-image: url(img/A-talking.png);
 }
 
-body.char-richard #foreground {
+body.char-quentin #foreground {
     background-image: url(img/Q-talking.png);
 }
 

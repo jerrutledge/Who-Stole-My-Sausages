@@ -39,7 +39,7 @@ Who Stole My Sausages?
 <<if $backatmidnight is true>>[["Walk me through yesterday again"|What Sati did yesterday]]<</if>>
 
 
-:: "Ah, Lobes" [bg-richard-room char-richard] {"position":"4900,3500","size":"100,100"}
+:: "Ah, Lobes" [bg-quentin-room char-quentin] {"position":"4900,3500","size":"100,100"}
 "Lobes? Tell me that's not his real name." 
 
 <<if $noearlobes is true>>[["Nickname. He has no earlobes."]]<</if>>
@@ -128,7 +128,7 @@ Hope that's the last time you make me say all that. Like groundhog day up in her
 [["It's borderline obsessive"]]
 
 
-:: "Bit early for me." [bg-richard-room char-richard] {"position":"4925,2625","size":"100,100"}
+:: "Bit early for me." [bg-quentin-room char-quentin] {"position":"4925,2625","size":"100,100"}
 "My creativity demands lubrication, and is no slave to the arbitary shackles of time." 
 
 [["Fair enough"]]
@@ -141,14 +141,14 @@ Hope that's the last time you make me say all that. Like groundhog day up in her
 [["And you were with no one else?"|"And no one else?"]]
 
 
-:: "Bottoms up!" [bg-richard-room char-richard] {"position":"5050,2625","size":"100,100"}
+:: "Bottoms up!" [bg-quentin-room char-quentin] {"position":"5050,2625","size":"100,100"}
 "Very good. It's Toodlepip, double-malt, aged 40 years. Gasoline for my creativity. Cheers!"<<set $tipsy to true>>
 
 [["Mmm, goes down smooth"]]
 [["I think I'd rather drink gasoline"]]
 
 
-:: "But you went to Bearly's last night" [bg-richard-room char-richard] {"position":"5400,3375","size":"100,100"}
+:: "But you went to Bearly's last night" [bg-quentin-room char-quentin] {"position":"5400,3375","size":"100,100"}
 "My //inspiration excursions// infuse the piece with lifeblood."
 
 [["You're not in the tent now"]]
@@ -160,7 +160,7 @@ Hope that's the last time you make me say all that. Like groundhog day up in her
 [["Is that our toaster?"]]
 
 
-:: "Comfort?" [bg-richard-room char-richard] {"position":"5650,3875","size":"100,100"}
+:: "Comfort?" [bg-quentin-room char-quentin] {"position":"5650,3875","size":"100,100"}
 "Exactly. Art is is not comfortable."
 
 <<if $whyQuentinartpiece is false>>[["Why are you doing this?"]]<</if>>
@@ -181,7 +181,7 @@ Hope that's the last time you make me say all that. Like groundhog day up in her
 [["Back to last night..."|What Fran did yesterday evening]]
 
 
-:: "Creativity demands it... sure" [bg-richard-room char-richard] {"position":"5050,2750","size":"100,100"}
+:: "Creativity demands it... sure" [bg-quentin-room char-quentin] {"position":"5050,2750","size":"100,100"}
 "Ah, sarcasm. The last refuge of the witless."<<set $Quentinsarcasm to true>>
 
 [["Anyway... I need to ask you some questions"|Need to ask Quentin questions]]
@@ -203,7 +203,7 @@ Hope that's the last time you make me say all that. Like groundhog day up in her
 <<if $cluefransmoke is true>>[["Let's recap once more"|Sati recap]]<</if>>
 
 
-:: "Did Fran cook them?" [bg-richard-room char-richard] {"position":"6225,3825","size":"100,100"}
+:: "Did Fran cook them?" [bg-quentin-room char-quentin] {"position":"6225,3825","size":"100,100"}
 "You'll have to ask her about that. She was certainly masticating."
 
 [["Masticating?"]]
@@ -255,7 +255,7 @@ Hope that's the last time you make me say all that. Like groundhog day up in her
 [["What did you talk to Sati and Arturo about?"]]
 
 
-:: "Didn't you say sarcasm was the 'last refuge of the witless?" [bg-richard-room char-richard] {"position":"5925,2500","size":"100,100"}
+:: "Didn't you say sarcasm was the 'last refuge of the witless?" [bg-quentin-room char-quentin] {"position":"5925,2500","size":"100,100"}
 "I... //ahem//... I don't recall."
 
 [["Walk me through last night again"|Quentin recap]]
@@ -295,13 +295,13 @@ Hope that's the last time you make me say all that. Like groundhog day up in her
 
 
 
-:: "Fair enough" [bg-richard-room char-richard] {"position":"4925,2750","size":"100,100"}
+:: "Fair enough" [bg-quentin-room char-quentin] {"position":"4925,2750","size":"100,100"}
 "Yes, it is //fair enough//, as you so eloquently put it."
 
 [["Anyway... I need to ask you some questions"|Need to ask Quentin questions]]
 
 
-:: "For how long?" [bg-richard-room char-richard] {"position":"5575,3250","size":"100,100"}
+:: "For how long?" [bg-quentin-room char-quentin] {"position":"5575,3250","size":"100,100"}
 "Around the clock. For as long at the art demands it."
 
 [["Here in your room..."]]
@@ -334,7 +334,7 @@ Hope that's the last time you make me say all that. Like groundhog day up in her
 <<if $doesarturostealfromkitchen is true>>[["Let's get on with my investigation"|Arturo investigation start]]<</if>>
 
 
-:: "Here in your room..." [bg-richard-room char-richard] {"position":"5400,3250","size":"100,100"}
+:: "Here in your room..." [bg-quentin-room char-quentin] {"position":"5400,3250","size":"100,100"}
 "Yes." 
 
 [["For how long?"]]
@@ -342,7 +342,7 @@ Hope that's the last time you make me say all that. Like groundhog day up in her
 
 
 
-:: "How do you know?" [bg-richard-room char-richard] {"position":"5225,3625","size":"100,100"}
+:: "How do you know?" [bg-quentin-room char-quentin] {"position":"5225,3625","size":"100,100"}
 "Ahem, well, on occasion I vacation to the isle of sobriety myself. Out of curiosity. And I've had the displeasure of sampling the Corona Sunbrew that Arturo was drinking. Piss water, really."<<set $islandofsobriety to true>>
 
 <<if $livemusic is false>>[["Why was it odd that Arturo drank 0% beer?"|"Why odd?"]]<</if>>
@@ -351,7 +351,7 @@ Hope that's the last time you make me say all that. Like groundhog day up in her
 
 
 
-:: "How do you uh, relieve yourself?" [bg-richard-room char-richard] {"position":"5650,3625","size":"100,100"}
+:: "How do you uh, relieve yourself?" [bg-quentin-room char-quentin] {"position":"5650,3625","size":"100,100"}
 "I have containers for waste disposal."<<set $howQuentinrelieve to true>>
 
 [["Poop bags?"]]
@@ -417,7 +417,7 @@ Hope that's the last time you make me say all that. Like groundhog day up in her
 [["Time to text her and come clean..."|Text Eria solution]]
 
 
-:: "I think I'd rather drink gasoline" [bg-richard-room char-richard] {"position":"5175,2875","size":"100,100"}
+:: "I think I'd rather drink gasoline" [bg-quentin-room char-quentin] {"position":"5175,2875","size":"100,100"}
 "I suppose you'd much rather be drinking something inoffensive, more akin to your sensibilities. A lukewarm Molson, perhaps?"
 
 [["I need to ask you some questions"|Need to ask Quentin questions]]
@@ -491,7 +491,7 @@ Hope that's the last time you make me say all that. Like groundhog day up in her
 [["Do you steal things from the kitchen often?"]]
 
 
-:: "It's almost midday" [bg-richard-room char-richard] {"position":"4925,2500","size":"100,100"}
+:: "It's almost midday" [bg-quentin-room char-quentin] {"position":"4925,2500","size":"100,100"}
 "Ah, well, in that case. Whiskey?"
 
 [["Bit early for me."]] 
@@ -512,13 +512,13 @@ Hope that's the last time you make me say all that. Like groundhog day up in her
 [["Yeah... go sausages!"|Arturo must solve crime]]
 
 
-:: "Make love? With who?" [bg-richard-room char-richard] {"position":"5400,3750","size":"100,100"}
+:: "Make love? With who?" [bg-quentin-room char-quentin] {"position":"5400,3750","size":"100,100"}
 "With //whom//? With my soulmate."
 
 [["Yourself?"]]
 
 
-:: "Masticating?" [Clue bg-richard-room char-richard] {"position":"6225,3950","size":"100,100"}
+:: "Masticating?" [Clue bg-quentin-room char-quentin] {"position":"6225,3950","size":"100,100"}
 "Chewing. Eating a sausage. Said they were //right tasty//."
 
 ''Statement remembered''<<set $cluefranatesausage to true>>
@@ -546,7 +546,7 @@ Hope that's the last time you make me say all that. Like groundhog day up in her
 [["What does that mean?"]]
 
 
-:: "Mmm, goes down smooth" [bg-richard-room char-richard] {"position":"5175,2750","size":"100,100"}
+:: "Mmm, goes down smooth" [bg-quentin-room char-quentin] {"position":"5175,2750","size":"100,100"}
 "Oh yes. The first one of the day always does."
 
 [["I need to ask you some questions"|Need to ask Quentin questions]]
@@ -558,7 +558,7 @@ Hope that's the last time you make me say all that. Like groundhog day up in her
 [["I'm so sorry"]]
 
 
-:: "Nickname. He has no earlobes." [bg-richard-room char-richard] {"position":"4775,3625","size":"100,100"}
+:: "Nickname. He has no earlobes." [bg-quentin-room char-quentin] {"position":"4775,3625","size":"100,100"}
 "How quaint." 
 
 <<if $tipsy is true>>[[(Tipsy) "Says a guy called Quentin"]]<</if>>
@@ -586,7 +586,7 @@ Hope that's the last time you make me say all that. Like groundhog day up in her
 [["Most of it?"]]
 
 
-:: "None, I suppose" [bg-richard-room char-richard] {"position":"5650,4000","size":"100,100"}
+:: "None, I suppose" [bg-quentin-room char-quentin] {"position":"5650,4000","size":"100,100"}
 "Exactly. Plus, I flush it all down the toilet anyway."
 
 <<if $whyQuentinartpiece is false>>[["Why are you doing this?"]]<</if>>
@@ -624,7 +624,7 @@ Hope that's the last time you make me say all that. Like groundhog day up in her
 <<if $whatkindofdiet is true>>[["Tell me again about last night|"Tell me more about these refreshments"]]<</if>>
 
 
-:: "Poop bags?" [bg-richard-room char-richard] {"position":"5650,3750","size":"100,100"}
+:: "Poop bags?" [bg-quentin-room char-quentin] {"position":"5650,3750","size":"100,100"}
 "There's no need for your disgust. What's the difference between my containers and a ceramic bowl?"
 
 [["Comfort?"]]
@@ -632,7 +632,7 @@ Hope that's the last time you make me say all that. Like groundhog day up in her
 [["None, I suppose"]]
 
 
-:: "Postmodernism is so fun" [bg-richard-room char-richard] {"position":"5525,3750","size":"100,100"}
+:: "Postmodernism is so fun" [bg-quentin-room char-quentin] {"position":"5525,3750","size":"100,100"}
 "The enlightenment of human thought cannot concern itself with trivial notions such as //fun//."
 
 <<if $whatQuentindoesintent is false>>[["What do you do in there?"]]<</if>>
@@ -648,13 +648,13 @@ Hope that's the last time you make me say all that. Like groundhog day up in her
 
 
 
-:: "Right on" [bg-richard-room char-richard] {"position":"4925,3000","size":"100,100"}
+:: "Right on" [bg-quentin-room char-quentin] {"position":"4925,3000","size":"100,100"}
 "Indeed."
 
 [["What did you get up to yesterday evening?"|What Quentin did yesterday evening]]
 
 
-:: "Sausages cooked in your frying pan..." [bg-richard-room char-richard] {"position":"6100,3700","size":"100,100"}
+:: "Sausages cooked in your frying pan..." [bg-quentin-room char-quentin] {"position":"6100,3700","size":"100,100"}
 "I wouldn't know anything about that. People use my things all the time. Not surprising—I'm the only one who actually respects the art of cooking. That cast-iron skillet is simply sublime." 
 
 [["So Fran brings you food?"]]
@@ -668,7 +668,7 @@ Hope that's the last time you make me say all that. Like groundhog day up in her
 [["Downer"|Sati how can I help]]
 
 
-:: "Self-respect?" [bg-richard-room char-richard] {"position":"5775,3875","size":"100,100"}
+:: "Self-respect?" [bg-quentin-room char-quentin] {"position":"5775,3875","size":"100,100"}
 "I will ignore your ill-conceived attempt at humour." 
 
 <<if $whyQuentinartpiece is false>>[["Why are you doing this?"]]<</if>>
@@ -683,7 +683,7 @@ Hope that's the last time you make me say all that. Like groundhog day up in her
 [["This hurts"]]
 
 
-:: "So Fran brings you food?" [bg-richard-room char-richard] {"position":"6100,3825","size":"100,100"}
+:: "So Fran brings you food?" [bg-quentin-room char-quentin] {"position":"6100,3825","size":"100,100"}
 "On ocassion, yes. She sees me suffer for my art."
 
 [["Did Fran cook them?"]]
@@ -697,7 +697,7 @@ Hope that's the last time you make me say all that. Like groundhog day up in her
 <<if $fromarturorecap is true>>[["Let's recap again"|Arturo recap]]<</if>>
 
 
-:: "So your art piece is jacking off in a tent in your room?" [bg-richard-room char-richard] {"position":"5400,4000","size":"100,100"}
+:: "So your art piece is jacking off in a tent in your room?" [bg-quentin-room char-quentin] {"position":"5400,4000","size":"100,100"}
 "To the crude layperson, I suppose that's one interpretation."
 
 <<if $whyQuentinartpiece is false>>[["Why are you doing this?"]]<</if>>
@@ -719,7 +719,7 @@ Hope that's the last time you make me say all that. Like groundhog day up in her
 <<if $doesarturostealfromkitchen is true>>[["Let's get on with my investigation"|Arturo investigation start]]<</if>>
 
 
-:: "Sounds like a cop-out to me" [bg-richard-room char-richard] {"position":"5525,3875","size":"100,100"}
+:: "Sounds like a cop-out to me" [bg-quentin-room char-quentin] {"position":"5525,3875","size":"100,100"}
 "It would be more of a //cop-out// to spoon-feed you with the tasteless gruel of 'meaning' to which you are so desperately addicted." 
 
 <<if $whatQuentindoesintent is false>>[["What do you do in there?"]]<</if>>
@@ -813,7 +813,7 @@ Hope that's the last time you make me say all that. Like groundhog day up in her
 [["Back to what you did yesterday..."|What Arturo did yesterday]]
 
 
-:: "Wait... you were at Bearly's as well?" [Clue bg-richard-room char-richard] {"position":"4900,3125","size":"100,100"}
+:: "Wait... you were at Bearly's as well?" [Clue bg-quentin-room char-quentin] {"position":"4900,3125","size":"100,100"}
 "Yes. I like to frequent local watering holes and observe the masses. I find it a fascinating exercise in understanding human behaviour. A challenging one, at that."<<set $Quentinatbearlys to true>>
 
 ''Statement remembered''<<set $clueQuentinatbearlys to true>>
@@ -837,7 +837,7 @@ Hope that's the last time you make me say all that. Like groundhog day up in her
 <<if $doesarturostealfromkitchen is true>>[["Let's get on with my investigation"|Arturo investigation start]]<</if>>
 
 
-:: "Were you there with Sati and Arturo?" [bg-richard-room char-richard] {"position":"4900,3250","size":"100,100"}
+:: "Were you there with Sati and Arturo?" [bg-quentin-room char-quentin] {"position":"4900,3250","size":"100,100"}
 "Aha, no. I prefer to remain... clandestine. I occupied a dingy corner table from which I could enjoy a full view of the bar. I did, however, see our dear housemates."
 
 [["What did you notice about them?"]]
@@ -864,7 +864,7 @@ Hope that's the last time you make me say all that. Like groundhog day up in her
 [["Anything else?"]]
 
 
-:: "What did you have for dinner?" [bg-richard-room char-richard] {"position":"5925,3125","size":"100,100"}
+:: "What did you have for dinner?" [bg-quentin-room char-quentin] {"position":"5925,3125","size":"100,100"}
 "I did not eat. I am limited to the conditions of my art piece. If anyone deems it charitable to bring me sustenance, I shan't refuse."<<set $quentinfasting to true>>
 
 [[(Challenge statement)|Challenge Quentin did not eat]]
@@ -886,7 +886,7 @@ Hope that's the last time you make me say all that. Like groundhog day up in her
 [["Nothing else to eat last night?"]]
 
 
-:: "What did you notice about them?" [bg-richard-room char-richard] {"position":"4900,3375","size":"100,100"}
+:: "What did you notice about them?" [bg-quentin-room char-quentin] {"position":"4900,3375","size":"100,100"}
 "Oh, they were engaged in the usual bar frivolities. Drinking, eating, cackling. They played pool with a rather scruffy sort, a man who insisted on wearing a captain's hat." 
 
 [["Ah, Lobes"]]
@@ -901,7 +901,7 @@ Hope that's the last time you make me say all that. Like groundhog day up in her
 [["Back to last night..."|What Fran did yesterday evening]]
 
 
-:: "What do you do in there?" [bg-richard-room char-richard] {"position":"5400,3625","size":"100,100"}
+:: "What do you do in there?" [bg-quentin-room char-quentin] {"position":"5400,3625","size":"100,100"}
 "I contemplate solitude. And make love."<<set $whatQuentindoesintent to true>>
 
 [["Make love? With who?"]]
@@ -935,7 +935,7 @@ Hope that's the last time you make me say all that. Like groundhog day up in her
 [["I did say that didn't I"]]
 
 
-:: "What is your latest piece?" [bg-richard-room char-richard] {"position":"5400,3125","size":"100,100"}
+:: "What is your latest piece?" [bg-quentin-room char-quentin] {"position":"5400,3125","size":"100,100"}
 "I'm living in a tent."<<set $Quentinartpieceexplain to true>>
 
 [["Here in your room..."]]
@@ -998,7 +998,7 @@ Hope that's the last time you make me say all that. Like groundhog day up in her
 [["Which friend?"]]
 
 
-:: "Why are you doing this?" [bg-richard-room char-richard] {"position":"5525,3625","size":"100,100"}
+:: "Why are you doing this?" [bg-quentin-room char-quentin] {"position":"5525,3625","size":"100,100"}
 "Meaning lies derives not from the mind of the //auteur//. Indeed, your attempts to derive meaning at all merely confirm the arbitary nature of knowledge itself."<<set $whyQuentinartpiece to true>> 
 
 [["Postmodernism is so fun"]]
@@ -1050,7 +1050,7 @@ Hope that's the last time you make me say all that. Like groundhog day up in her
 [[Toot toot|Sati how can I help]]
 
 
-:: "Why odd?" [Clue bg-richard-room char-richard] {"position":"5075,3625","size":"100,100"}
+:: "Why odd?" [Clue bg-quentin-room char-quentin] {"position":"5075,3625","size":"100,100"}
 "Because you'd need to be drunk to appreciate the generic, east-coast acoustic guitar strangling that was happening on stage."<<set $livemusic to true>>
 
 ''Statement remembered''<<set $clueQuentinlivemusic to true>>
@@ -1111,7 +1111,7 @@ Hope that's the last time you make me say all that. Like groundhog day up in her
 [["Why leave one?"]]
 
 
-:: "You're not in the tent now" [bg-richard-room char-richard] {"position":"5400,3500","size":"100,100"}
+:: "You're not in the tent now" [bg-quentin-room char-quentin] {"position":"5400,3500","size":"100,100"}
 "Yes, I had to attend to your incessant knocking."
 
 [["What do you do in there?"]]
@@ -1140,19 +1140,19 @@ Hope that's the last time you make me say all that. Like groundhog day up in her
 [["Back to what you did yesterday..."|What Arturo did yesterday]]
 
 
-:: "Yourself?" [bg-richard-room char-richard] {"position":"5400,3875","size":"100,100"}
+:: "Yourself?" [bg-quentin-room char-quentin] {"position":"5400,3875","size":"100,100"}
 "Naturally." 
 
 [["So your art piece is jacking off in a tent in your room?"]]
 
 
-:: (Tipsy) "And to drink more whiskey!" [bg-richard-room char-richard] {"position":"5700,2500","size":"100,100"}
+:: (Tipsy) "And to drink more whiskey!" [bg-quentin-room char-quentin] {"position":"5700,2500","size":"100,100"}
 "I think one glass was a more than generous donation to your cause."
 
 [["Walk me through last night again"|Quentin recap]]
 
 
-:: (Tipsy) "Hit me with some poetry" [bg-richard-room char-richard] {"position":"5400,2925","size":"100,100"}
+:: (Tipsy) "Hit me with some poetry" [bg-quentin-room char-quentin] {"position":"5400,2925","size":"100,100"}
 Harbourmaster / landlocked slave / port side / whores cried / who can fathom / the algae-smothered?<<set $Quentinpoem to true>>
 
 [["Inspired"|What Quentin did yesterday evening]]
@@ -1160,19 +1160,19 @@ Harbourmaster / landlocked slave / port side / whores cried / who can fathom / t
 [["Huh"|What Quentin did yesterday evening]]
 
 
-:: (Tipsy) "Pretentious. I meant pretentious." [bg-richard-room char-richard] {"position":"4800,3000","size":"100,100"}
+:: (Tipsy) "Pretentious. I meant pretentious." [bg-quentin-room char-quentin] {"position":"4800,3000","size":"100,100"}
 "Do not mistake confidence for pretension. You're better than that. Or are you?" 
 
 [["What did you get up to yesterday evening?"|What Quentin did yesterday evening]]
 
 
-:: (Tipsy) "Says a guy called Quentin" [bg-richard-room char-richard] {"position":"4900,3625","size":"100,100"}
+:: (Tipsy) "Says a guy called Quentin" [bg-quentin-room char-quentin] {"position":"4900,3625","size":"100,100"}
 "I'll have you know that the name //Quintinus// can be traced back to a 3rd-century saint—a missionary martyred in Gaul. When was //Lobes// martyred, pray tell?"
 
 [["Did you notice anything else?"|Did Quentin notice anything else]]
 
 
-:: (Tipsy) "Why are you the way you are?" [bg-richard-room char-richard] {"position":"4925,2875","size":"100,100"}
+:: (Tipsy) "Why are you the way you are?" [bg-quentin-room char-quentin] {"position":"4925,2875","size":"100,100"}
 "I suppose I was born with a natural flair for the arts. My parents tell me that, at two, I would tear up colouring books and create grotesque collages from the pieces—deconstructing the form as toddlers everywhere comprehend it."
 
 [["Right on"]]
@@ -1291,7 +1291,7 @@ Which of Arturo's statements will challenge what Fran said: //that she only ate 
 [[Back|Challenge Fran only ate cod and squares]]
 
 
-:: Arturo's statements Quentin didn't eat [Challenge bg-richard-room char-richard] {"position":"5800,3375","size":"100,100"}
+:: Arturo's statements Quentin didn't eat [Challenge bg-quentin-room char-quentin] {"position":"5800,3375","size":"100,100"}
 Which of Arturo's statements will challenge what Quentin said: //that he didn't eat last night//?
 
 <<if $cluearturoatbearlys is true>>[[Arturo was at Bearly's|Challenge Quentin didn't eat fail]]<</if>>
@@ -1512,7 +1512,7 @@ You don't have any evidence to challenge that statement.
 [[Back to recap|Fran recap]]
 
 
-:: Challenge Quentin did not eat [Challenge bg-richard-room char-richard] {"position":"5925,3250","size":"100,100"}
+:: Challenge Quentin did not eat [Challenge bg-quentin-room char-quentin] {"position":"5925,3250","size":"100,100"}
 Whose statement will challenge what Quentin said: //that he didn't eat last night//?
 
 [[Eira|Eira's statements Quentin didn't eat]]
@@ -1523,7 +1523,7 @@ Whose statement will challenge what Quentin said: //that he didn't eat last nigh
 <<if $fromQuentinrecap is true>>[[Back|Challenge Quentin recap]]<</if>>
 
 
-:: Challenge Quentin didn't eat fail [Fail bg-richard-room char-richard] {"position":"6050,3250","size":"100,100"}
+:: Challenge Quentin didn't eat fail [Fail bg-quentin-room char-quentin] {"position":"6050,3250","size":"100,100"}
 "Sorry, is this some attempt at a joke?"
 
 [[(Challenge again)|Challenge Quentin did not eat]]
@@ -1531,7 +1531,7 @@ Whose statement will challenge what Quentin said: //that he didn't eat last nigh
 <<if $fromQuentinrecap is true>>[["About last night's events..."|Quentin recap]]<</if>>
 
 
-:: Challenge Quentin didn't eat success [Success Clue bg-richard-room char-richard] {"position":"6100,3575","size":"100,100"}
+:: Challenge Quentin didn't eat success [Success Clue bg-quentin-room char-quentin] {"position":"6100,3575","size":"100,100"}
 "Alight—if you absolutely must know—I did eat last night. Frances brought me a couple of delightful sausages during the night, which I enjoyed while reading Ulysses." 
 
 ''Statement remembered''<<set $francesbroughtQuentinsausages to true>>
@@ -1539,7 +1539,7 @@ Whose statement will challenge what Quentin said: //that he didn't eat last nigh
 [["Sausages cooked in your frying pan..."]]
 
 
-:: Challenge Quentin recap [Challenge bg-richard-room char-richard] {"position":"5800,2750","size":"100,100"}
+:: Challenge Quentin recap [Challenge bg-quentin-room char-quentin] {"position":"5800,2750","size":"100,100"}
 Which part of Quentin's statement would you like to challenge?<<set $fromQuentinrecap to true>>
 
 [[That he wrote poetry at Bearly's|Challenge Quentin recap fail]]
@@ -1547,7 +1547,7 @@ Which part of Quentin's statement would you like to challenge?<<set $fromQuentin
 [[Back|Quentin recap]]
 
 
-:: Challenge Quentin recap fail [Fail bg-richard-room char-richard] {"position":"5975,2750","size":"100,100"}
+:: Challenge Quentin recap fail [Fail bg-quentin-room char-quentin] {"position":"5975,2750","size":"100,100"}
 "Sorry, is this some attempt at a joke?"
 
 [[(Challenge again)|Challenge Quentin recap]]
@@ -1684,7 +1684,7 @@ You don't have any evidence to challenge that statement.
 [["Happy hunting!"]]
 
 
-:: Did Quentin notice anything else [Clue bg-richard-room char-richard] {"position":"5150,3500","size":"100,100"}
+:: Did Quentin notice anything else [Clue bg-quentin-room char-quentin] {"position":"5150,3500","size":"100,100"}
 "Hmm. They seemed to enjoy the live 'music'. Oh, and Arturo was drinking alcohol-free beer. Which struck me as odd."
 
 ''Statement remembered''<<set $clueQuentinsawarturoalcoholfree to true>>
@@ -1800,7 +1800,7 @@ Which of Eira's statements will challenge what Fran said: //that she only ate co
 [[Back|Challenge Fran only ate cod and squares]]
 
 
-:: Eira's statements Quentin didn't eat [Challenge bg-richard-room char-richard] {"position":"5925,3375","size":"100,100"}
+:: Eira's statements Quentin didn't eat [Challenge bg-quentin-room char-quentin] {"position":"5925,3375","size":"100,100"}
 Which of Eira's statements will challenge what Quentin said: //that he didn't eat last night//?
 
 <<if $cluepackagingtorn is true>>[[The sausage packaging was sloppily torn into|Challenge Quentin didn't eat fail]]<</if>>
@@ -1857,7 +1857,7 @@ Thank you for playing.
 [["Who to interview next..."|Who to interview]]
 
 
-:: Finish Quentin convo [bg-richard-room char-richard] {"position":"5275,2375","size":"100,100"}
+:: Finish Quentin convo [bg-quentin-room char-quentin] {"position":"5275,2375","size":"100,100"}
 "I would say it's been a pleasure, but I abhor lying for the sake of politeness." 
 
 [["Who to interview next..."|Who to interview]]
@@ -1950,7 +1950,7 @@ Which of Fran's statements will challenge what Sati said: //that Arturo was wast
 
 
 
-:: Fran's statements Quentin didn't eat [Challenge bg-richard-room char-richard] {"position":"5925,3500","size":"100,100"}
+:: Fran's statements Quentin didn't eat [Challenge bg-quentin-room char-quentin] {"position":"5925,3500","size":"100,100"}
 Which of Fran's statements will challenge what Quentin said: //that he didn't eat last night//?
 
 <<if $cluefranatefishsupper is true>>[[Fran had cod, potatoes, and green beans for supper|Challenge Quentin didn't eat fail]]<</if>>
@@ -2139,7 +2139,7 @@ Because of...
 [[(Cancel text)|Who to interview]]
 
 
-:: Need to ask Quentin questions [bg-richard-room char-richard] {"position":"5050,2875","size":"100,100"}
+:: Need to ask Quentin questions [bg-quentin-room char-quentin] {"position":"5050,2875","size":"100,100"}
 "And I shall answer them. If, of course, they're the right questions."
 
 [["What did you get up to yesterday evening?"|What Quentin did yesterday evening]]
@@ -2173,14 +2173,14 @@ Because of...
 [["I should interview someone else for now"|Who to interview]]
 
 
-:: Quentin recap [Needs-attention bg-richard-room char-richard] {"position":"5800,2625","size":"100,100"}
+:: Quentin recap [Needs-attention bg-quentin-room char-quentin] {"position":"5800,2625","size":"100,100"}
 "If you //must// hear it again. Yesterday eve I sequestered myself in a corner table of the public house known as Bearly's, where I observed humanity and wrote poetry. Afterwards, I retired to my encampment here where I<<if $cluefranatesausage is false>> fasted and<</if>> meditated.<<if $cluefranatesausage is true>> Frances stopped by and we conversed over sausages.<</if>>"
 
 [[(Challenge statement)|Challenge Quentin recap]]
 [["That all adds up"|Finish Quentin convo]]
 
 
-:: Quentin resume [bg-richard-room char-richard] {"position":"5800,2375","size":"100,100"}
+:: Quentin resume [bg-quentin-room char-quentin] {"position":"5800,2375","size":"100,100"}
 "Oh goody. Here to grill me with your inane questions once more."
 
 <<if $Quentinsarcasm is true>>[["Didn't you say sarcasm was the 'last refuge of the witless?"]]<</if>>
@@ -2189,7 +2189,7 @@ Because of...
 
 
 
-:: Quentin start [bg-richard-room char-richard] {"position":"4925,2375","size":"100,100"}
+:: Quentin start [bg-quentin-room char-quentin] {"position":"4925,2375","size":"100,100"}
 "Why must we talk at this god-awful hour."<<set $spokentoQuentin to true>>
 
 [["It's almost midday"]]
@@ -2399,7 +2399,7 @@ Which of Sati's statements will challenge what Fran said: //that she only ate co
 [[Back|Challenge Fran only ate cod and squares]]
 
 
-:: Sati's statements Quentin didn't eat [Challenge bg-richard-room char-richard] {"position":"6050,3375","size":"100,100"}
+:: Sati's statements Quentin didn't eat [Challenge bg-quentin-room char-quentin] {"position":"6050,3375","size":"100,100"}
 Which of Sati's statements will challenge what Quentin said: //that he didn't eat last night//?
 
 <<if $cluesatiatbearlys is true>>[[Sati was at Bearly's yesterday evening, playing pool|Challenge Quentin didn't eat fail]]<</if>> 
@@ -2668,7 +2668,7 @@ I finished the investigation, and...
 <<if $fransupper is true>>[["That's all for now, thanks"|Finish Fran convo]]<</if>>
 
 
-:: What Quentin did yesterday evening [bg-richard-room char-richard] {"position":"5150,3000","size":"100,100"}
+:: What Quentin did yesterday evening [bg-quentin-room char-quentin] {"position":"5150,3000","size":"100,100"}
 "In the evening went to Bearly's House of Blues and Ribs to write poetry. Then I returned home to work on my latest piece.<<if $francesbroughtQuentinsausages is true>> Frances later nourished me with some delectable pork sausages."<</if>>
 
 <<if $Quentinatbearlys is false>>[["Wait... you were at Bearly's as well?"]]<</if>>
