@@ -64,7 +64,7 @@ jobs:
         run: |
           mkdir dist
           mv img dist/img
-          mv audio dist/audio
+          mv audio dist
           ./tweego/tweego "output.twee" "new-sausage-script.js" "sausage-style.css" -o dist/index.html
 
       - name: Setup Pages
