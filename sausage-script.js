@@ -6,7 +6,7 @@ foreground.id = "foreground";
 document.body.appendChild(foreground);
 
 Setting.addRange("masterVolume", {
-	label    : "Master volume.",
+	label    : "Volume",
 	min      : 0,
 	max      : 10,
 	step     : 1,
