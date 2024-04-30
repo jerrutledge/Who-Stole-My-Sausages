@@ -181,19 +181,19 @@ body.bg-door {
 }
 
 body.char-eira #foreground {
-    background-image: url(img/E-neural.png);
+    background-image: url(img/E-talking.png);
 }
 
 body.char-sati #foreground {
-    background-image: url(img/S-neutral.png);
+    background-image: url(img/S-talking.png);
 }
 
 body.char-arturo #foreground {
-    background-image: url(img/A-neutral.png);
+    background-image: url(img/A-talking.png);
 }
 
 body.char-richard #foreground {
-    background-image: url(img/Q-neutral.png);
+    background-image: url(img/Q-talking.png);
 }
 
 body.char-fran #foreground {
