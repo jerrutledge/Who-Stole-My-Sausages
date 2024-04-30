@@ -173,7 +173,7 @@ body.bg-door {
 #foreground {
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-position: center;
+    background-position: top center;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -181,15 +181,15 @@ body.bg-door {
 }
 
 body.char-eira #foreground {
-    background-image: url(img/Person.png);
+    background-image: url(img\E-neural.png);
 }
 
 body.char-sati #foreground {
-    background-image: url(img/Person.png);
+    background-image: url(img/S-neutral.png);
 }
 
 body.char-arturo #foreground {
-    background-image: url(img/Person.png);
+    background-image: url(img/A-neutral.png);
 }
 
 body.char-richard #foreground {
