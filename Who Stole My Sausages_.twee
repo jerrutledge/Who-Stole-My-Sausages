@@ -2448,7 +2448,7 @@ Which of Sati's statements will challenge what Quentin said: //that he didn't ea
 A meaty detective game by Productive Pigeons
 For Dialogue Jam 2024
 <<link "The cock crows(test).">>
-<<audio "rooster" loop>>
+<<audio "rooster" loop play>>
 <</link>>
 
 
