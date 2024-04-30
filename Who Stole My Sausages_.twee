@@ -107,7 +107,7 @@ Hope that's the last time you make me say all that. Like groundhog day up in her
 [["And if you fail?"]]
 
 
-:: "Are you mad at me?" [bg-kitchen char-fran] {"position":"2250,950","size":"100,100"}
+:: "Are you mad at me?" [bg-kitchen char-eira] {"position":"2250,950","size":"100,100"}
 "I've had some time to process. And speak to my therapist about it. And journal about it. I //may// have overreacted. I know you're weren't in control of your actions. I'm just grateful for your dedication to helping me. You're a good friend, you know?"
 
 [["I choriz-know"|Too soon]]
@@ -1997,13 +1997,13 @@ Which of Fran's statements will challenge what Sati said: //that no animal passe
 
 
 
-:: Game over [bg-kitchen char-fran] {"position":"2375,950","size":"100,100"}
+:: Game over [bg-kitchen char-eira] {"position":"2375,950","size":"100,100"}
 "Your awful puns won't save you now. We're done here. See you around, I guess."
 
 [[End|End game over]]
 
 
-:: Game result [bg-kitchen char-fran] {"position":"2250,700","size":"100,100"}
+:: Game result [bg-kitchen char-eira] {"position":"2250,700","size":"100,100"}
 "So, remember when you told me who stole my sausages and everything?"
 
 <<if $correctperson is true and $correctpreparation is true and $correctmotive is true>>[["Yeah..."|Win game]]<</if>>
@@ -2081,7 +2081,7 @@ They were...
 [["What a legend!"|Love Lobes]]
 
 
-:: Lose game [Fail bg-kitchen char-fran] {"position":"2375,825","size":"100,100"}
+:: Lose game [Fail bg-kitchen char-eira] {"position":"2375,825","size":"100,100"}
 "We'll I've spoken to everyone, and you were fucking ''wrong about the details''. I put myself on the line for you, swore that you ran a //tight investigation//. You embarrassed me. What happened?"
 
 [["To be frank, I don't know"|Game over]]
@@ -2625,7 +2625,7 @@ I finished the investigation, and...
 [["Don't I bring you comfort at the end of the day?"|Psychology][$comfort to true]]
 
 
-:: Too soon [bg-kitchen char-fran] {"position":"2250,1075","size":"100,100"}
+:: Too soon [bg-kitchen char-eira] {"position":"2250,1075","size":"100,100"}
 "Too soon $name. Too soon."
 
 [[End]]
@@ -2768,7 +2768,7 @@ I finished the investigation, and...
 [[That's... a lot]] 
 
 
-:: Win game [Success bg-kitchen char-fran] {"position":"2250,825","size":"100,100"}
+:: Win game [Success bg-kitchen char-eira] {"position":"2250,825","size":"100,100"}
 "We'll I've spoken to everyone, and you were fucking ''bang-on right about everything''. As much as I didn't want to believe it was you."
 
 [["Are you mad at me?"]]
