@@ -178,6 +178,14 @@ body.bg-title {
     background-image: url(img/Title_bg.png);
 }
 
+body.bg-congrats {
+    background-image: url(img/Congrats_bush.png);
+}
+
+body.bg-beefed {
+    background-image: url(img/Beefed.png);
+}
+
 #foreground {
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -206,4 +214,12 @@ body.char-quentin #foreground {
 
 body.char-fran #foreground {
     background-image: url(img/F-talking.png);
+}
+
+body.img-pan #foreground {
+    background-image: url(img/Frying_pan.png);
+}
+
+body.img-fridge #foreground {
+    background-image: url(img/Abduction_site.png);
 }
