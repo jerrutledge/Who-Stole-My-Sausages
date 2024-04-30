@@ -5,6 +5,9 @@ var foreground = document.createElement("div");
 foreground.id = "foreground";
 document.body.appendChild(foreground);
 
+Setting.addHeader("Test Settings");
+
+
 window.on_click_settings = function() {
     Dialog.setup();
     var content = document.createElement('div');
