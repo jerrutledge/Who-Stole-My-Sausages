@@ -2447,7 +2447,7 @@ Which of Sati's statements will challenge what Quentin said: //that he didn't ea
 <h1>Who Stole My Sausages?</h1> 
 A meaty detective game by Productive Pigeons
 For Dialogue Jam 2024
-<<cacheaudio "rooster" "rooster.wav">>
+<<cacheaudio "rooster" "audio/rooster.wav">>
 <<link "The cock crows(test).">>
 <<audio "rooster" play >>
 <</link>>
@@ -2598,7 +2598,7 @@ Made in Kjipuktuk (Halifax, Nova Scotia)
 <<set $correctmotive to false>>
 
 /* Audio    */
-<<cacheaudio "rooster" "rooster.wav">>
+<<cacheaudio "rooster" "audio/rooster.wav">>
 
 :: Survey Sati [bg-arturo-room char-arturo] {"position":"3200,3375","size":"100,100"}
 "I... yes, perhaps. She enjoys my questions."
