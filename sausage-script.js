@@ -5,6 +5,17 @@ var foreground = document.createElement("div");
 foreground.id = "foreground";
 document.body.appendChild(foreground);
 
+Setting.addRange("masterVolume", {
+	label    : "Volume",
+	min      : 0,
+	max      : 10,
+	step     : 1,
+	onChange : function () {
+		SimpleAudio.volume(settings.masterVolume / 10);
+	}
+}); // default value not defined, so max value (10) is used
+
+
 window.on_click_settings = function() {
     Dialog.setup();
     var content = document.createElement('div');
