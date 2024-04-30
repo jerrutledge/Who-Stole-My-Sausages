@@ -166,8 +166,12 @@ body.bg-richard-room {
     background-image: url(img/Richard_Room.png);
 }
 
-body.bg-door {
-    background-image: url(img/Door.png);
+body.bg-fran-door {
+    background-image: url(img/F-Door.png);
+}
+
+body.bg-quentin-door {
+    background-image: url(img/Q-Door.png);
 }
 
 #foreground {
