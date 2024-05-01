@@ -31,6 +31,33 @@ $(document).on(':passagerender', function(ev){
 	var tags_split = tags.split(" ");
 	console.log("Tags:"+tags_split);
 	
+	if (tags_split[0] == "bg-kitchen"){
+		if (!(current_theme == kitchen_theme)){
+			kitchen_theme.play();
+			current_theme = kitchen_theme;
+		}
+	}
+	else if (tags_split[0] == "bg-arturo-room"){
+		if (!(current_theme == arturo_theme)){
+			arturo_theme.play();
+			current_theme = arturo_theme;
+		}
+	}
+	else if (tags_split[0] == "bg-sati-room"){
+		if (!(current_theme == sati_theme)){
+			sati_theme.play();
+			current_theme = sati_theme;
+		}
+	}
+	else if (tags_split[0] == "bg-quentin-room"){
+		if (!(current_theme == quinten_theme)){
+			quinten_theme.play();
+			current_theme = quinten_theme;
+		}
+	}
+
+
+	
 });
 
 
