@@ -1,1 +1,11 @@
 output.twee
+sugarcube-2/LICENSE
+sugarcube-2/icon.svg
+sugarcube-2/format.js
+sugarcube-2.zip
+dist/
+dist/*
+.DS_Store
+storyformats/
+tweego/
+new-sausage-script.js

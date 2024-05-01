@@ -20,6 +20,11 @@ Who Stole My Sausages?
   "zoom": 1
 }
 
+:: StoryMenu
+<<link "Settings" >>
+  <<run window.on_click_settings()>>
+<</link>>
+
 
 :: "A bit worse for wear" [char-fran bg-kitchen] {"position":"6875,2525","size":"100,100"}
 "Not surprised! "Go out an' get yourself some of that vitamin D, Lord knows we all need it this time of year."
@@ -337,11 +342,13 @@ Hope that's the last time you make me say all that. Like groundhog day up in her
 [["But you went to Bearly's last night"]]
 
 
+
 :: "How do you know?" [bg-quentin-room char-quentin] {"position":"5225,3625","size":"100,100"}
 "Ahem, well, on occasion I vacation to the isle of sobriety myself. Out of curiosity. And I've had the displeasure of sampling the Corona Sunbrew that Arturo was drinking. Piss water, really."<<set $islandofsobriety to true>>
 
 <<if $livemusic is false>>[["Why was it odd that Arturo drank 0% beer?"|"Why odd?"]]<</if>>
 <<if $livemusic is true>>[["Talk me through last night again"|What Quentin did yesterday evening]]<</if>>
+
 
 
 :: "How do you uh, relieve yourself?" [bg-quentin-room char-quentin] {"position":"5650,3625","size":"100,100"}
@@ -645,6 +652,7 @@ Hope that's the last time you make me say all that. Like groundhog day up in her
 
 <<if $drunk is true>>[[(Tipsy) "Or three! Wheeeyyy!"]]<</if>>
 [["Remind me what you did again..."|What Fran did yesterday evening]]
+
 
 
 :: "Right on" [bg-quentin-room char-quentin] {"position":"4925,3000","size":"100,100"}
@@ -1174,8 +1182,6 @@ Hope that's the last time you make me say all that. Like groundhog day up in her
 [["Why is it in pieces?"]]
 [["What if I want to toast something?"]]
 [["Do you steal things from the kitchen often?"]]
-
-
 :: (Tipsy) "And to drink more whiskey!" [bg-quentin-room char-quentin] {"position":"5700,2500","size":"100,100"}
 "I think one glass was a more than generous donation to your cause."
 
@@ -1200,8 +1206,6 @@ Harbourmaster / landlocked slave / port side / whores cried / who can fathom / t
 "Oh you naughty so-and-so, alright I had four! They pulled my arm they did."
 
 [["Remind me what you did again last night..."|What Fran did yesterday evening]]
-
-
 :: (Tipsy) "Pretentious. I meant pretentious." [bg-quentin-room char-quentin] {"position":"4800,3000","size":"100,100"}
 "Do not mistake confidence for pretension. You're better than that. Or are you?" 
 
@@ -1999,6 +2003,7 @@ Which of Fran's statements will challenge what Sati said: //that Arturo was wast
 [[Back|Challenge Sati Arturo was wasted]]
 
 
+
 :: Fran's statements Quentin didn't eat [Challenge bg-quentin-room char-quentin] {"position":"5925,3500","size":"100,100"}
 Which of Fran's statements will challenge what Quentin said: //that he didn't eat last night//?
 
@@ -2232,6 +2237,7 @@ Because of...
 <<if $Quentinsarcasm is true>>[["Didn't you say sarcasm was the 'last refuge of the witless?"]]<</if>>
 <<if $tipsy is true>>[[(Tipsy) "And to drink more whiskey!"]]<</if>>
 [["Walk me through last night again"|Quentin recap]]
+
 
 
 :: Quentin start [bg-quentin-room char-quentin] {"position":"4925,2375","size":"100,100"}
@@ -2642,12 +2648,6 @@ Made in Kjipuktuk (Halifax, Nova Scotia)
 
 /* Audio    */
 <<cacheaudio "rooster" "audio/rooster.wav">>
-
-
-:: StoryMenu {"position":"0,0","size":"100,100"}
-<<link "Settings" >>
-  <<run window.on_click_settings()>>
-<</link>>
 
 
 :: Survey Sati [bg-arturo-room char-arturo] {"position":"3200,3375","size":"100,100"}

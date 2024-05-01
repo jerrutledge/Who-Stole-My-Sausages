@@ -1,39 +1,225 @@
-#story li {
-    display: inline-block;
-	margin: 10px;
-    padding: 5px;
-    background-color: darkgrey;
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+
+/* HIDES BACK AND FORWARD BUTTONS */
+#ui-bar-history {
+    /* display: none; */
 }
 
-#story li > a {
-    color: black;
-    text-decoration: none;
-}
-
-#story {
-    position: absolute;
-    bottom: 10px;
-    height: 280px;
-    overflow-y: auto;
-    width: 800px;
-    background: darkblue;
-    left: 0;
-    right: 0;
-    margin-left: auto !important;
-    margin-right: auto !important;
-}
-
-@media screen and (max-width: 1136px) {
-    #story {
-        width: 400px;
-    }
+html,
+body {
+    height: 100%;
+    font-family: "Patrick Hand", cursive;
 }
 
 body {
-    background-image: url("img/arturo-mockup.png");
+    background-image: none;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     background-size: cover;
+    background-position: center;
+}
+
+#story li {
+    display: inline-block;
+    margin: 10px;
+}
+
+#story li>a {
+    margin: 10px;
+    padding: 7px;
+    background-color: #ccc;
+    box-shadow: 20px 38px 34px -26px rgba(0, 0, 0, 0.2);
+    border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px;
+    border: solid 2px #41403E;
+    color: #41403E;
+    text-decoration: none;
+    transition: all .2s ease-in;
+}
+
+#story li>a:hover {
+    background-color: lightgoldenrodyellow;
+    box-shadow: 20px 38px 34px -26px rgba(0, 0, 0, 0.2);
+}
+
+.passage {
+    padding: 0 2rem;
+    font-size: 22px;
+    max-height: 280px;
+    overflow-y: auto;
+}
+
+.passage ol,
+.passage ul {
+    margin-left: 0px;
+    padding-left: 0px;
+}
+
+#ui-bar.stowed~#story {
+    margin-left: 0;
+}
+
+#story {
+    margin-left: 0;
+    position: absolute;
+    bottom: 10px;
+    height: 280px;
+    width: 100%;
+}
+
+#story h1 {
+    margin: 0 0 .3em;
+}
+
+#passage-start h1 {
+    margin: 0 0 -.5em;
 }
 
 #passages {
-    padding: 36px;
+    background-color: #EEE;
+    color: #222;
+    padding: 1rem 0px;
+    width: 1200px;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-shadow: 20px 38px 34px -26px rgba(0, 0, 0, 0.2);
+    border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px;
+    border: solid 7px #41403E;
+}
+
+/* small */
+@media screen and (max-width: 1400px) {
+    #passages {
+        width: 800px;
+    }
+}
+
+/* even smaller */
+@media screen and (max-width: 1136px) {
+    #ui-bar.stowed~#story {
+        margin-left: 0;
+    }
+
+    #passages {
+        width: 90%;
+    }
+}
+
+#ui-bar {
+    -webkit-transition: left .2s ease-in;
+    -o-transition: left .2s ease-in;
+    transition: all .2s ease-in;
+}
+
+#ui-bar.stowed {
+    background-color: transparent;
+    border-color: transparent;
+}
+
+#ui-bar.stowed #ui-bar-toggle {
+    border: 1px solid #444;
+    background-color: #444;
+}
+
+input,
+select,
+textarea {
+    color: #222;
+    background-color: transparent;
+    border-color: #444;
+    transition: background-color .2s ease-in;
+}
+
+input:not(:disabled):focus,
+input:not(:disabled):hover,
+select:not(:disabled):focus,
+select:not(:disabled):hover,
+textarea:not(:disabled):focus,
+textarea:not(:disabled):hover {
+    color: #222;
+    background-color: lightgoldenrodyellow;
+    border-color: #444;
+}
+
+input[type=text] {
+    min-width: 10em;
+}
+
+label {
+    margin-left: .5em;
+}
+
+
+/* Custom Backgrounds/Foregrounds */
+body.bg-kitchen {
+    background-image: url(img/Kitchen.png);
+}
+
+body.bg-sati-room {
+    background-image: url(img/Sati_Room.png);
+}
+
+body.bg-arturo-room {
+    background-image: url(img/Arturo_Room.png);
+}
+
+body.bg-quentin-room {
+    background-image: url(img/Quentin_Room.png);
+}
+
+body.bg-fran-door {
+    background-image: url(img/F-Door.png);
+}
+
+body.bg-quentin-door {
+    background-image: url(img/Q-Door.png);
+}
+
+body.bg-title {
+    background-image: url(img/Title_bg.png);
+}
+
+body.bg-congrats {
+    background-image: url(img/Congrats_bush.png);
+}
+
+body.bg-beefed {
+    background-image: url(img/Beefed.png);
+}
+
+#foreground {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: top center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+}
+
+body.char-eira #foreground {
+    background-image: url(img/E-talking.png);
+}
+
+body.char-sati #foreground {
+    background-image: url(img/S-talking.png);
+}
+
+body.char-arturo #foreground {
+    background-image: url(img/A-talking.png);
+}
+
+body.char-quentin #foreground {
+    background-image: url(img/Q-talking.png);
+}
+
+body.char-fran #foreground {
+    background-image: url(img/F-talking.png);
+}
+
+body.img-pan #foreground {
+    background-image: url(img/Frying_pan.png);
+}
+
+body.img-fridge #foreground {
+    background-image: url(img/Abduction_site.png);
 }
