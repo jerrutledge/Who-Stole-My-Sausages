@@ -174,7 +174,7 @@ Hope that's the last time you make me say all that. Like groundhog day up in her
 "Oh yes, it's a riot. It's all glow-in-the-dark see. I won fifty bucks! Granted I spent almost that on books, drinks, and the neon daubers... you gotta come next time."<<set $cosmic to true>>
 
 <<if $stoned is true>>[[(Stoned) "Coooooooool..."]]<</if>>
-<<if $drunk is true>>[[(Tipsy) "LET'S GO RIGHT NOW"]]<</if>>
+<<if $tipsy is true>>[[(Tipsy) "LET'S GO RIGHT NOW"]]<</if>>
 [["Back to last night..."|What Fran did yesterday evening]]
 
 
@@ -337,13 +337,11 @@ Hope that's the last time you make me say all that. Like groundhog day up in her
 [["But you went to Bearly's last night"]]
 
 
-
 :: "How do you know?" [bg-quentin-room char-quentin] {"position":"5225,3625","size":"100,100"}
 "Ahem, well, on occasion I vacation to the isle of sobriety myself. Out of curiosity. And I've had the displeasure of sampling the Corona Sunbrew that Arturo was drinking. Piss water, really."<<set $islandofsobriety to true>>
 
 <<if $livemusic is false>>[["Why was it odd that Arturo drank 0% beer?"|"Why odd?"]]<</if>>
 <<if $livemusic is true>>[["Talk me through last night again"|What Quentin did yesterday evening]]<</if>>
-
 
 
 :: "How do you uh, relieve yourself?" [bg-quentin-room char-quentin] {"position":"5650,3625","size":"100,100"}
@@ -399,7 +397,7 @@ Hope that's the last time you make me say all that. Like groundhog day up in her
 [["I need to ask you some questions"|Ask Fran questions]]
 
 
-:: "I have an urge to sculpt you" {"position":"3325,3750","size":"100,100"}
+:: "I have an urge to sculpt you" [bg-arturo-room char-arturo] {"position":"3325,3750","size":"100,100"}
 "You are a very strange person, $name."
 
 [["What did you do yesterday evening?"|What Arturo did yesterday]]
@@ -467,7 +465,7 @@ Hope that's the last time you make me say all that. Like groundhog day up in her
 [["What happened next?"]]
 
 
-:: "Inflict pain" {"position":"3450,3750","size":"100,100"}
+:: "Inflict pain" [bg-arturo-room char-arturo] {"position":"3450,3750","size":"100,100"}
 "I respectfully decline your sadistic proposal."
 
 [["What did you do yesterday evening?"|What Arturo did yesterday]]
@@ -645,9 +643,8 @@ Hope that's the last time you make me say all that. Like groundhog day up in her
 :: "Resident advisor meeting?" [char-fran bg-kitchen] {"position":"6875,2900","size":"100,100"}
 "Oh yes, we yarn about issues we're facing trying to look after troublemakers like yourself! But really it's an excuse for a wee drink or two."<<set $residentadvisor to true>>
 
-<<if $drunk is true>>[[(Tipsy) "Or three! Wheeeyyy!"]]<</if>>
+<<if $tipsy is true>>[[(Tipsy) "Or three! Wheeeyyy!"]]<</if>>
 [["Remind me what you did again..."|What Fran did yesterday evening]]
-
 
 
 :: "Right on" [bg-quentin-room char-quentin] {"position":"4925,3000","size":"100,100"}
@@ -780,7 +777,7 @@ Hope that's the last time you make me say all that. Like groundhog day up in her
 [["Back to what you did yesterday..."|What Arturo did yesterday]]
 
 
-:: "They're HUGE" {"position":"3200,3750","size":"100,100"}
+:: "They're HUGE" [bg-arturo-room char-arturo] {"position":"3200,3750","size":"100,100"}
 "Ah, well. I like the size of my eyebrows. But I will consider your... proposal."
 
 [["What did you do yesterday evening?"|What Arturo did yesterday]]
@@ -1150,14 +1147,14 @@ Hope that's the last time you make me say all that. Like groundhog day up in her
 [["So your art piece is jacking off in a tent in your room?"]]
 
 
-:: (Stoned) "Can I live in your flannel?" {"position":"7000,2775","size":"100,100"}
+:: (Stoned) "Can I live in your flannel?" [bg-kitchen char-fran] {"position":"7000,2775","size":"100,100"}
 "Oh-ho! You sure can my love. Just burrow on in there! You are a funny one 'aint ya!"
 
 [["What are you doing in the kitchen?"]]
 [["What did you get up to yesterday?"|What Fran did yesterday evening]]
 
 
-:: (Stoned) "Can I pluck your eyebrows?" {"position":"3200,3625","size":"100,100"}
+:: (Stoned) "Can I pluck your eyebrows?" [bg-arturo-room char-arturo] {"position":"3200,3625","size":"100,100"}
 "Uh... why must you pluck my eyebrows?"
 
 [["They're HUGE"]]
@@ -1165,18 +1162,20 @@ Hope that's the last time you make me say all that. Like groundhog day up in her
 [["Inflict pain"]]
 
 
-:: (Stoned) "Coooooooool..." {"position":"6875,3275","size":"100,100"}
+:: (Stoned) "Coooooooool..." [bg-kitchen char-fran] {"position":"6875,3275","size":"100,100"}
 "I thought it was gonna be a load of east coast grannies hunched over their grids. Nope—all young bucks havin' a whale of a time!"
 
 [["Back to last night..."|What Fran did yesterday evening]]
 
 
-:: (Stoned) "Toast... toast... I love saying 'toast'" {"position":"3525,2625","size":"100,100"}
+:: (Stoned) "Toast... toast... I love saying 'toast'" [bg-arturo-room char-arturo] {"position":"3525,2625","size":"100,100"}
 "It has a good mouth feeling, this is true." 
 
 [["Why is it in pieces?"]]
 [["What if I want to toast something?"]]
 [["Do you steal things from the kitchen often?"]]
+
+
 :: (Tipsy) "And to drink more whiskey!" [bg-quentin-room char-quentin] {"position":"5700,2500","size":"100,100"}
 "I think one glass was a more than generous donation to your cause."
 
@@ -1191,16 +1190,18 @@ Harbourmaster / landlocked slave / port side / whores cried / who can fathom / t
 [["Huh"|What Quentin did yesterday evening]]
 
 
-:: (Tipsy) "LET'S GO RIGHT NOW" {"position":"6750,3275","size":"100,100"}
+:: (Tipsy) "LET'S GO RIGHT NOW" [bg-kitchen char-fran] {"position":"6750,3275","size":"100,100"}
 "<<if $profanity is true>>Christ<</if>><<if $profanity is false>>Pike<</if>> on a bike you're keen! They're closed right now. But I'll come get ya next time round!"
 
 [["Back to last night..."|What Fran did yesterday evening]]
 
 
-:: (Tipsy) "Or three! Wheeeyyy!" {"position":"7125,2900","size":"100,100"}
+:: (Tipsy) "Or three! Wheeeyyy!" [bg-kitchen char-fran] {"position":"7125,2900","size":"100,100"}
 "Oh you naughty so-and-so, alright I had four! They pulled my arm they did."
 
 [["Remind me what you did again last night..."|What Fran did yesterday evening]]
+
+
 :: (Tipsy) "Pretentious. I meant pretentious." [bg-quentin-room char-quentin] {"position":"4800,3000","size":"100,100"}
 "Do not mistake confidence for pretension. You're better than that. Or are you?" 
 
@@ -1213,7 +1214,7 @@ Harbourmaster / landlocked slave / port side / whores cried / who can fathom / t
 [["Did you notice anything else?"|Did Quentin notice anything else]]
 
 
-:: (Tipsy) "Want some company?" {"position":"5400,4125","size":"100,100"}
+:: (Tipsy) "Want some company?" [bg-quentin-room char-quentin] {"position":"5400,4125","size":"100,100"}
 "Ah... alas, no. //C'est une quête solitaire.//"
 
 <<if $whyQuentinartpiece is false>>[["Why are you doing this?"]]<</if>>
@@ -1756,7 +1757,7 @@ You don't have any evidence to challenge that statement.
 <<if $dontcry is true>>"It's the principle!<</if>><<if $outrage is true>>"Right?<</if>> They were destined for greatness. I was going to make mash, casserole... [[toad in the hole]] $name, TOAD IN THE BLOODY HOLE."<<set $searchedtrash to true>>
 
 
-:: Drying rack [bg-kitchen char-eira] {"position":"1475,875","size":"100,100"}
+:: Drying rack [bg-kitchen char-eira img-pan] {"position":"1475,875","size":"100,100"}
 "Just a frying pan... HOLD ON! It's been cleaned well, but not well enough. Tell me this isn't sausage meat stuck to the bottom." 
 
 [["It's sausage meat"|Sausage meat]]
@@ -1998,7 +1999,6 @@ Which of Fran's statements will challenge what Sati said: //that Arturo was wast
 [[Back|Challenge Sati Arturo was wasted]]
 
 
-
 :: Fran's statements Quentin didn't eat [Challenge bg-quentin-room char-quentin] {"position":"5925,3500","size":"100,100"}
 Which of Fran's statements will challenge what Quentin said: //that he didn't eat last night//?
 
@@ -2232,7 +2232,6 @@ Because of...
 <<if $Quentinsarcasm is true>>[["Didn't you say sarcasm was the 'last refuge of the witless?"]]<</if>>
 <<if $tipsy is true>>[[(Tipsy) "And to drink more whiskey!"]]<</if>>
 [["Walk me through last night again"|Quentin recap]]
-
 
 
 :: Quentin start [bg-quentin-room char-quentin] {"position":"4925,2375","size":"100,100"}
@@ -2638,6 +2637,12 @@ Made in Kjipuktuk (Halifax, Nova Scotia)
 
 /* Audio    */
 <<cacheaudio "rooster" "audio/rooster.wav">>
+
+
+:: StoryMenu {"position":"0,0","size":"100,100"}
+<<link "Settings" >>
+  <<run window.on_click_settings()>>
+<</link>>
 
 
 :: Survey Sati [bg-arturo-room char-arturo] {"position":"3200,3375","size":"100,100"}
