@@ -17,9 +17,13 @@ Setting.addRange("masterVolume", {
 
 var rooster = new Audio('audio/rooster.wav');
 var arturo_theme = new Audio('audio/Arturo Theme 3.mp3');
+arturo_theme.loop = true;
 var quinten_theme = new Audio('audio/Quinten Theme 1.mp3');
+quinten_theme.loop = true;
 var kitchen_theme = new Audio('audio/Kitchen Theme.mp3');
+kitchen_theme.loop = true;
 var sati_theme = new Audio('audio/Sati Theme 2.mp3');
+sati_theme.loop = true;
 var lose_theme = new Audio('audio/You Lose!.mp3');
 var win_theme = new Audio('audio/You Win!.mp3');
 
@@ -27,7 +31,6 @@ var current_theme = '';
 
 $(document).on(':passagerender', function(ev){
 	
-	rooster.play();
 	var tags = document.body.getAttribute("data-tags");
 	var tags_split = tags.split(" ");
 	console.log("Tags:"+tags_split);
@@ -36,6 +39,10 @@ $(document).on(':passagerender', function(ev){
 	if (tags_split[0] == "bg-kitchen"){
 		console.log("in kitchen");
 		if (!(current_theme == kitchen_theme)){
+			if (current_theme != ''){
+				current_theme.pause();
+				current_theme.currentTime = 0;
+			}
 			console.log("Playing kitchen theme");
 			kitchen_theme.play();
 			current_theme = kitchen_theme;
@@ -43,18 +50,30 @@ $(document).on(':passagerender', function(ev){
 	}
 	else if (tags_split[0] == "bg-arturo-room"){
 		if (!(current_theme == arturo_theme)){
+			if (current_theme != ''){
+				current_theme.pause();
+				current_theme.currentTime = 0;
+			}
 			arturo_theme.play();
 			current_theme = arturo_theme;
 		}
 	}
 	else if (tags_split[0] == "bg-sati-room"){
 		if (!(current_theme == sati_theme)){
+			if (current_theme != ''){
+				current_theme.pause();
+				current_theme.currentTime = 0;
+			}
 			sati_theme.play();
 			current_theme = sati_theme;
 		}
 	}
 	else if (tags_split[0] == "bg-quentin-room"){
 		if (!(current_theme == quinten_theme)){
+			if (current_theme != ''){
+				current_theme.pause();
+				current_theme.currentTime = 0;
+			}
 			quinten_theme.play();
 			current_theme = quinten_theme;
 		}
