@@ -15,6 +15,14 @@ Setting.addRange("masterVolume", {
 	}
 }); // default value not defined, so max value (10) is used
 
+var rooster = new Audio('audio/rooster.wav');
+
+$(document).on(':passagerender', function(ev){
+	
+	rooster.play();
+	
+});
+
 
 window.on_click_settings = function() {
     Dialog.setup();
