@@ -2,7 +2,7 @@
 
 /* HIDES BACK AND FORWARD BUTTONS */
 #ui-bar-history {
-    /* display: none; */
+    display: none;
 }
 
 html,
