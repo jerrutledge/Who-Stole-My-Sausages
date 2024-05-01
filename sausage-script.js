@@ -28,7 +28,8 @@ var current_theme = '';
 $(document).on(':passagerender', function(ev){
 	
 	var tags = document.body.getAttribute("data-tags");
-	console.log("Tags:"+tags);
+	var tags_split = tags.split(" ");
+	console.log("Tags:"+tags_split);
 	
 });
 
