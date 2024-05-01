@@ -16,10 +16,19 @@ Setting.addRange("masterVolume", {
 }); // default value not defined, so max value (10) is used
 
 var rooster = new Audio('audio/rooster.wav');
+var arturo_theme = new Audio('audio/Arturo Theme 3.mp3');
+var quinten_theme = new Audio('audio/Quinten Theme 1.mp3');
+var kitchen_theme = new Audio('audio/Kitchen Theme.mp3');
+var sati_theme = new Audio('audio/Sati Theme 2.mp3');
+var lose_theme = new Audio('audio/You Lose!.mp3');
+var win_theme = new Audio('audio/You Win!.mp3');
+
+var current_theme = '';
 
 $(document).on(':passagerender', function(ev){
 	
-	rooster.play();
+	var tags = document.body.getAttribute("data-tags");
+	console.log("Tags:"+tags);
 	
 });
 
