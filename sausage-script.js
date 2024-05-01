@@ -27,7 +27,7 @@ var current_theme = '';
 
 $(document).on(':passagerender', function(ev){
 	
-	tags = $(body).attr("data-tags");
+	var tags = $(body).attr("data-tags");
 	console.log("Tags:"+tags);
 	
 });
