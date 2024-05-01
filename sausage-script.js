@@ -6,7 +6,7 @@ var settingProfanityToggle = function () {
 };
 Setting.addToggle("profanity", {
 	label    : "Profanity",
-	default  : State.getVar("$profanity"),
+	default  : true,
 	onChange : settingProfanityToggle
 });
 
