@@ -27,10 +27,11 @@ var current_theme = '';
 
 $(document).on(':passagerender', function(ev){
 	
+	rooster.play();
 	var tags = document.body.getAttribute("data-tags");
 	var tags_split = tags.split(" ");
 	console.log("Tags:"+tags_split);
-	rooster.play();
+	
 	
 	if (tags_split[0] == "bg-kitchen"){
 		console.log("in kitchen");
