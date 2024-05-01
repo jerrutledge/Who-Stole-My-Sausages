@@ -53,7 +53,6 @@ function addLoadEvent(func) {
 addLoadEvent(preloader);
 
 // Add setting for profanity
-Setting.addToggle("Profanity", definition)
 var settingProfanityToggle = function () {
     var setProfanity = settings.profanity;
     State.setVar('$profanity', setProfanity);
