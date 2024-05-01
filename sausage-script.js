@@ -32,7 +32,9 @@ $(document).on(':passagerender', function(ev){
 	console.log("Tags:"+tags_split);
 	
 	if (tags_split[0] == "bg-kitchen"){
+		console.log("in kitchen");
 		if (!(current_theme == kitchen_theme)){
+			console.log("Playing kitchen theme");
 			kitchen_theme.play();
 			current_theme = kitchen_theme;
 		}
