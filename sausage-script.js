@@ -78,6 +78,32 @@ $(document).on(':passagerender', function(ev){
 			current_theme = quinten_theme;
 		}
 	}
+	else if (tags_split[0] == "bg-beefed"){
+		if (!(current_theme == quinten_theme)){
+			if (current_theme != ''){
+				current_theme.pause();
+				current_theme.currentTime = 0;
+			}
+			lose_theme.play();
+			current_theme = lose_theme;
+		}
+	}
+	else if (tags_split[0] == "bg-congrats"){
+		if (!(current_theme == quinten_theme)){
+			if (current_theme != ''){
+				current_theme.pause();
+				current_theme.currentTime = 0;
+			}
+			win_theme.play();
+			current_theme = win_theme;
+		}
+	}
+	else if (tags_split[0] == "bg-title"){
+		if (current_theme != ''){
+			current_theme.pause();
+			current_theme.currentTime = 0;
+		}
+	} 
 
 
 	
