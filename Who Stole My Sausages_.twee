@@ -20,11 +20,6 @@ Who Stole My Sausages?
   "zoom": 1
 }
 
-:: StoryMenu
-<<link "Settings" >>
-  <<run window.on_click_settings()>>
-<</link>>
-
 
 :: "A bit worse for wear" [char-fran bg-kitchen] {"position":"6875,2525","size":"100,100"}
 "Not surprised! "Go out an' get yourself some of that vitamin D, Lord knows we all need it this time of year."
@@ -2503,7 +2498,6 @@ For Dialogue Jam 2024
 
 
 [[Start game|Player name]]
-[[Settings]]
 
 
 :: Start game [bg-kitchen char-eira] {"position":"600,425","size":"100,100"}
