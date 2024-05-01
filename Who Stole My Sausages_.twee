@@ -1658,7 +1658,7 @@ Whose statement will challenge what Sati said: //that Quentin wasn't at Bearly's
 
 
 :: Challenge Sati Quentin not at Bearly's success [Success bg-sati-room char-sati] {"position":"2350,3800","size":"100,100"}
-"Oh<<if $profanity is true>> shit<</if>><if $profanity is false>> snap<</if>>, he //was// there. Well, he... oh<<if $profanity is true>> god<</if>> $name, it's all truuue! Arturo was sober, and I'm a bad vegetarian. I only //sometimes// eat meat. I can't control my drunken urges."
+"Oh<<if $profanity is true>> shit<</if>><<if $profanity is false>> snap<</if>>, he //was// there. Well, he... oh<<if $profanity is true>> god<</if>> $name, it's all truuue! Arturo was sober, and I'm a bad vegetarian. I only //sometimes// eat meat. I can't control my drunken urges."
 
 [["Did you eat Eira's sausages?"]]
 
@@ -2626,6 +2626,7 @@ Made in Kjipuktuk (Halifax, Nova Scotia)
 <<set $cluefrancheckedquentin to false>>
 <<set $cluefransilencedsatiarturo to false>>
 <<set $cluefranatefishsupper to false>>
+<<set $cluefrancookedsausages to false>>
 
 /* Origin points  */
 <<set $fromarturorecap to false>>
