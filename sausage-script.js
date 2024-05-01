@@ -1,3 +1,15 @@
+// Add setting for profanity
+Setting.addToggle("Profanity", definition)
+var settingProfanityToggle = function () {
+    var setProfanity = settings.profanity;
+    State.setVar('$profanity', setProfanity);
+};
+Setting.addToggle("profanity", {
+	label    : "Profanity",
+	default  : State.getVar("$profanity"),
+	onChange : settingProfanityToggle
+});
+
 // As a boolean; always start stowed
 Config.ui.stowBarInitially = true;
 
