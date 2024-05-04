@@ -66,13 +66,12 @@ jobs:
           mv img dist/img
           mv audio dist/audio
           ./tweego/tweego "output.twee" "new-sausage-script.js" "sausage-style.css" -o dist/index.html
-          zip -r web.zip dist
 
       - name: Archive production artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: web-zip
-          path: web.zip
+          name: web
+          path: dist
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
