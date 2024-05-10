@@ -2640,11 +2640,6 @@ Made in Kjipuktuk (Halifax, Nova Scotia)
 <<cacheaudio "rooster" "audio/rooster.wav">>
 
 
-:: StoryMenu {"position":"0,0","size":"100,100"}
-<<link "Settings" >>
-  <<run window.on_click_settings()>>
-<</link>>
-
 
 :: Survey Sati [bg-arturo-room char-arturo] {"position":"3200,3375","size":"100,100"}
 "I... yes, perhaps. She enjoys my questions."
