@@ -1306,6 +1306,17 @@ Whose statement will challenge what Arturo said: //that he drank Corona//?
 <<if $whatkindofdiet is true>>[["Tell me again about last night|"Tell me more about these refreshments"]]<</if>>
 
 
+:: Arturo's statements [bg-kitchen] {"position":"2500,2300","size":"100,100"}
+<<if $cluearturoatbearlys is true>>Arturo was at Bearly's<</if>>
+<<if $cluearturoonlyatechicken is true>>Arturo ate crispy chicken tenders<</if>>
+<<if $cluearturosober is true>>Arturo was completely sober last night<</if>>
+<<if $cluearturocelebrating is true>>Arturo was celebrating something last night<</if>>
+<<if $cluearturowithsati is true>>Arturo was with Sati last night<</if>>
+<<if $satieatsmeatwhenstoned is true>>Sati eats meat when she's drunk and stoned<</if>>
+[[Back|Reflect]]
+[[Stop reflecting|Who to interview]]
+
+
 :: Arturo's statements Arturo wasted [Challenge bg-sati-room char-sati] {"position":"2025,3500","size":"100,100"}
 Which of Arturo's statements will challenge what Sati said: //that Arturo was wasted last night//?
 
@@ -1794,6 +1805,15 @@ one head specifically
 [[One week later...|Game result]]
 
 
+:: Eira's statements [bg-kitchen] {"position":"2375,2300","size":"100,100"}
+<<if $cluepackagingtorn is true>>The sausage packaging was sloppily torn into<</if>>
+<<if $cluelabelremoved is true>>The label that displayed Eira's name was removed from the packaging<</if>>
+<<if $clueQuentinsfryingpan is true>>It looks like sausage meat was stuck to the bottom of Quentin's frying pan<</if>>
+<<if $clueQuentinisnocturnal  is true>>Quentin cooks his dinner late at night, long other the other housemates<</if>>
+[[Back|Reflect]]
+[[Stop reflecting|Who to interview]]
+
+
 :: Eira's statements Arturo Sati ate meat [Challenge bg-arturo-room char-arturo] {"position":"4350,4250","size":"100,100"}
 Which of Eira's statements will challenge what Arturo said: //that Sati was tempted by a pre-bed meat snack//?
 
@@ -1953,6 +1973,16 @@ Fran is not in her room.
 [["A bit worse for wear"]]
 [["I feel great"]]
 [["Why wouldn't I feel okay?"]]
+
+
+:: Fran's statements [bg-kitchen] {"position":"2375,2425","size":"100,100"}
+<<if $cluefranatefishsupper is true>>Fran had cod, potatoes, and green beans for supper<</if>>
+<<if $cluefrancheckedquentin is true>>Fran checked in on Quentin<</if>>
+<<if $cluefransilencedsatiarturo is true>>Fran told Sati and Arturo to be quiet after a noise complaint<</if>>
+<<if $cluefranate1sausage is true>>Fran ate a sausage after delivering some to Quentin<</if>>
+<<if $franfoundsausages is true>>Fran found the sausages already cooked on a plate<</if>>
+[[Back|Reflect]]
+[[Stop reflecting|Who to interview]]
 
 
 :: Fran's statements Arturo Sati ate meat [Challenge bg-arturo-room char-arturo] {"position":"4350,4375","size":"100,100"}
@@ -2240,6 +2270,16 @@ Because of...
 [["It's almost midday"]]
 
 
+:: Quentin's statements [bg-kitchen] {"position":"2250,2300","size":"100,100"}
+<<if $clueQuentinsawarturoalcoholfree is true>>Arturo was drinking alcohol-free Coronas<</if>>
+<<if $clueQuentinatbearlys is true>>Quentin was at Bearly's last night<</if>>
+<<if $clueQuentinlivemusic is true>>Quentin listened to 'generic, east-coast acoustic guitar strangling' at Bearly's<</if>>
+<<if $francesbroughtQuentinsausages is true>>Fran brought sausages to Quentin's room last night<</if>>
+<<if $cluefranatesausage is true>>Fran ate a sausage<</if>>
+[[Back|Reflect]]
+[[Stop reflecting|Who to interview]]
+
+
 :: Quentin's statements  Quentin not at Bearly's [Challenge bg-sati-room char-sati] {"position":"2325,3350","size":"100,100"}
 Which of Quentin's statements will challenge what Sati said: //that Quentin wasn't at Bearly's last night//?
 
@@ -2328,6 +2368,17 @@ Which of Quentin's statements will challenge what Sati said: ///that no animal p
 [[Back|Sati doesn't eat meat]]
 
 
+:: Reflect [bg-kitchen] {"position":"2375,2175","size":"100,100"}
+//Reflect on whose statements?//
+
+[[Eira's|Eira's statements]]
+<<if $spokentoarturo is true>>[[Arturo's|Arturo's statements]]<</if>>
+<<if $spokentosati is true>>[[Sati's|Sati's statements]]<</if>>
+<<if $spokentoQuentin is true>>[[Quentin's|Quentin's statements]]<</if>>
+<<if $spokentofran is true>>[[Fran's|Fran's statements]]<</if>>
+[[Back|Who to interview]]
+
+
 :: Sati ate othe last one [char-fran bg-kitchen] {"position":"8025,4275","size":"100,100"}
 "Figures! I saw the plate was empty when I popped back later to wash it up."
 
@@ -2379,6 +2430,18 @@ Whose statement will challenge what Sati said: //that no animal passes her lips/
 
 [["I feel energised!"|Why do you feel that way]]
 [["Not great Sati, not great"|Why do you feel that way]]
+
+
+:: Sati's statements [bg-kitchen] {"position":"2500,2425","size":"100,100"}
+<<if $cluesatiatbearlys is true>>Sati was at Bearly's yesterday evening, playing pool<</if>> 
+<<if $cluesativegetarian is true>>Sati is a vegetarian<</if>> 
+<<if $cluesatibackatmidnight is true>>Sati got back to the house around midnight<</if>>
+<<if $cluesatiwitharturo is true>>Sati was with Arturo all evening<</if>>
+<<if $cluefraninkitchen is true>>Sati saw Fran come in and out of the kitchen<</if>>
+<<if $cluesatiate1sausage is true>>Sati ate a sausage<</if>>
+<<if $cluefransmoke is true>>There was smoke in the kitchen while Fran clattered plates<</if>>
+[[Back|Reflect]]
+[[Stop reflecting|Who to interview]]
 
 
 :: Sati's statements Arturo Sati ate meat [Challenge bg-arturo-room char-arturo] {"position":"4475,4250","size":"100,100"}
@@ -2804,6 +2867,7 @@ I finished the investigation, and...
 <<if $spokentoQuentin is false>>[[Fran|Fran false start]]<</if>>
 <<if $spokentoQuentin is true and $spokentofran is false>>[[Fran|Fran start]]<</if>>
 <<if $spokentoQuentin is true and $spokentofran is true>>[[Fran|Fran resume]]<</if>>
+[[Reflect]]
 [[Text Eira with solution|Text Eria solution]]
 
 
