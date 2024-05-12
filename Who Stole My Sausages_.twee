@@ -2232,6 +2232,7 @@ Because of...
 <label>What's your detective name? 
 <<textbox "$name" "PI Porkins">>
 </label>
+Note: profanity can be turned on/off in //Settings//
 
 [[Enter kitchen|Start game]]
 
@@ -2558,7 +2559,6 @@ For Dialogue Jam 2024
 <<link "The cock crows(test).">>
 <<audio "rooster" loop play>>
 <</link>>
-
 
 [[Start game|Player name]]
 [[Settings]]
