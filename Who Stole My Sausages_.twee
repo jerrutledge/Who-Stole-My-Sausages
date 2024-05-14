@@ -2233,6 +2233,8 @@ Because of...
 <<textbox "$name" "PI Porkins">>
 </label>
 
+//Note: profanity can be turned on/off in Settings//
+
 [[Enter kitchen|Start game]]
 
 
@@ -2555,6 +2557,7 @@ Which of Sati's statements will challenge what Quentin said: //that he didn't ea
 <h1>Who Stole My Sausages?</h1> 
 A meaty detective game by Productive Pigeons
 For Dialogue Jam 2024
+
 
 [[Start game|Player name]]
 
