@@ -2232,7 +2232,8 @@ Because of...
 <label>What's your detective name? 
 <<textbox "$name" "PI Porkins">>
 </label>
-Note: profanity can be turned on/off in //Settings//
+
+//Note: profanity can be turned on/off in Settings//
 
 [[Enter kitchen|Start game]]
 
