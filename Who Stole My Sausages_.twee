@@ -2557,12 +2557,9 @@ Which of Sati's statements will challenge what Quentin said: //that he didn't ea
 <h1>Who Stole My Sausages?</h1> 
 A meaty detective game by Productive Pigeons
 For Dialogue Jam 2024
-<<link "The cock crows(test).">>
-<<audio "rooster" loop play>>
-<</link>>
+
 
 [[Start game|Player name]]
-[[Settings]]
 
 
 :: Start game [bg-kitchen char-eira] {"position":"600,425","size":"100,100"}
@@ -2708,11 +2705,6 @@ Made in Kjipuktuk (Halifax, Nova Scotia)
 /* Audio    */
 <<cacheaudio "rooster" "audio/rooster.wav">>
 
-
-:: StoryMenu {"position":"0,0","size":"100,100"}
-<<link "Settings" >>
-  <<run window.on_click_settings()>>
-<</link>>
 
 
 :: Survey Sati [bg-arturo-room char-arturo] {"position":"3200,3375","size":"100,100"}
