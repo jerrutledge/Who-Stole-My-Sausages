@@ -281,7 +281,7 @@ Hope that's the last time you make me say all that. Like groundhog day up in her
 :: "Eira is going to kill me" [char-fran bg-kitchen] {"position":"8100,4400","size":"100,100"}
 "No! I'm sure she'll be happy just to get closure. Maybe. She is freakishly obsessed with sausages."
 
-[["Time to text her and come clean..."|Text Eria solution]]
+[["Time to text her and come clean..."|Who to interview]]
 
 
 :: "Everyone burns their toast" [bg-arturo-room char-arturo] {"position":"3450,3375","size":"100,100"}
@@ -412,7 +412,7 @@ Hope that's the last time you make me say all that. Like groundhog day up in her
 :: "I slept-ate raw sausage" [char-fran bg-kitchen] {"position":"7975,4400","size":"100,100"}
 "Haha, you sure did! What else have you been eating in your sleep, I wonder? Come to think of it, I could swear my Nautical Crunch keeps disappearing..."
 
-[["Time to text her and come clean..."|Text Eria solution]]
+[["Time to text her and come clean..."|Who to interview]]
 
 
 :: "I think I'd rather drink gasoline" [bg-quentin-room char-quentin] {"position":"5175,2875","size":"100,100"}
@@ -1243,7 +1243,7 @@ Harbourmaster / landlocked slave / port side / whores cried / who can fathom / t
 
 
 :: Agree to investigate [bg-kitchen char-eira] {"position":"600,2050","size":"100,100"}
-"Stop that. I need you to take this SERIOUSLY. Also, this must have happened in the evening. I put them in the fridge around 5pm. Shit, I need to go. Good luck. I'm counting on you!" 
+"Stop that. I need you to take this SERIOUSLY. Also, this must have happened in the evening. I put them in the fridge around 5pm. <<if $profanity is true>>Shit,<</if>><<if $profanity is false>>Shoot,<</if>> I need to go. Good luck. I'm counting on you!" 
 
 [["Let's do this"|Who to interview]]
 
@@ -1310,7 +1310,6 @@ Whose statement will challenge what Arturo said: //that he drank Corona//?
 <<if $cluearturoatbearlys is true>>Arturo was at Bearly's<</if>>
 <<if $cluearturoonlyatechicken is true>>Arturo ate crispy chicken tenders<</if>>
 <<if $cluearturosober is true>>Arturo was completely sober last night<</if>>
-<<if $cluearturocelebrating is true>>Arturo was celebrating something last night<</if>>
 <<if $cluearturowithsati is true>>Arturo was with Sati last night<</if>>
 <<if $satieatsmeatwhenstoned is true>>Sati eats meat when she's drunk and stoned<</if>>
 [[Back|Reflect]]
@@ -2143,7 +2142,7 @@ They were...
 
 
 :: Label [bg-kitchen char-eira] {"position":"1025,900","size":"100,100"}
-"<<if $profanity is true>>Bullshit!<</if>><<if $profanity is false>>Hokum!<</if>> You know how I label all food: name, date purchased, date opened. Plus, they were on //my// shelf. Six people, one kitchen, two fridges, one shelf each. Easy! But no, some fucker went and VIOLATED my food territory!"<<set $knowslabel  to true>>
+"<<if $profanity is true>>Bullshit!<</if>><<if $profanity is false>>Hokum!<</if>> You know how I label all food: name, date purchased, date opened. Plus, they were on //my// shelf. Six people, one kitchen, two fridges, one shelf each. Easy! But no, some <<if $profanity is true>>fucker<</if>><<if $profanity is false>>snake<</if>> went and VIOLATED my food territory!"<<set $knowslabel  to true>>
 
 <<if $cluepackagingtorn is true>>[["Was the label on the packaging you found?"|Check packaging for label fridge]]<</if>>
 <<if $searchedtrash is false>>[["Have you checked the trash?"|Trash]]<</if>>
@@ -2159,7 +2158,7 @@ They were...
 
 
 :: Lose game [Fail bg-kitchen char-eira] {"position":"2375,825","size":"100,100"}
-"We'll I've spoken to everyone, and you were fucking ''wrong about the details''. I put myself on the line for you, swore that you ran a //tight investigation//. You embarrassed me. What happened?"
+"We'll I've spoken to everyone, and you were ''wrong about the details''. I put myself on the line for you, swore that you ran a //tight investigation//. You embarrassed me. What happened?"
 
 [["To be frank, I don't know"|Game over]]
 [["I butchered the investigation"|Game over]]
@@ -2188,7 +2187,7 @@ They were...
 
 
 :: Maybe I'm busy too [bg-kitchen char-eira] {"position":"600,1550","size":"100,100"}
-"Ha! Good one. I know you do sweet<<if $profanity is true>> fuck-all<</if>><<if $profanity is true>> nothing<</if>> on Wednesdays, just like everyone else around here. What you got planned, another Gilmore Girls marathon?" 
+"Ha! Good one. I know you do sweet<<if $profanity is true>> fuck-all<</if>><<if $profanity is false>> FA<</if>> on Wednesdays, just like everyone else around here. What you got planned, another Gilmore Girls marathon?" 
 
 [["Rude"|Psychology][$rude to true]]
 [["It's timeless"|Psychology][$timeless to true]]
@@ -2239,7 +2238,7 @@ Because of...
 
 
 :: Psychology [bg-kitchen char-eira] {"position":"600,1675","size":"100,100"}
-<<if $tradegy is true>>"Sarcasm ignored.<</if>><<if $comfort is true>>"Aw, you know you're my best bud. But sausages are my true love.<</if>><<if $rude is true>>"Just facts.<</if>><<if $timeless is true>>"You're not wrong there. Emily, the OG.<</if>> Oh shit! I just thought of another reason why you're //perfect// for this. You're literally studying psychology."
+<<if $tradegy is true>>"Sarcasm ignored.<</if>><<if $comfort is true>>"Aw, you know you're my best bud. But sausages are my true love.<</if>><<if $rude is true>>"Just facts.<</if>><<if $timeless is true>>"You're not wrong there. Emily, the OG.<</if>> Oh<<if $profanity is true>> shit!<</if>><<if $profanity is false>> snap!<</if>> I just thought of another reason why you're //perfect// for this. You're literally studying psychology."
 
 [["Doesn't make me a investigator"|Investigator][$notinvestigator to true]]
 [["It is kind of perfect..."|Investigator][$kindofperfect to true]]
@@ -2430,7 +2429,7 @@ Whose statement will challenge what Sati said: //that no animal passes her lips/
 :: Sati start [bg-sati-room char-sati] {"position":"1100,2375","size":"100,100"}
 "Hey $name, how's it going?"<<set $spokentosati to true>> 
 
-[["I feel energised!"|Why do you feel that way]]
+[["I feel energized!"|Why do you feel that way]]
 [["Not great Sati, not great"|Why do you feel that way]]
 
 
@@ -2706,7 +2705,6 @@ Made in Kjipuktuk (Halifax, Nova Scotia)
 <<cacheaudio "rooster" "audio/rooster.wav">>
 
 
-
 :: Survey Sati [bg-arturo-room char-arturo] {"position":"3200,3375","size":"100,100"}
 "I... yes, perhaps. She enjoys my questions."
 
@@ -2718,7 +2716,6 @@ Made in Kjipuktuk (Halifax, Nova Scotia)
 I finished the investigation, and... 
 
 [[Eira stole your sausages|How prepared]]
-[[Quentin stole your sausages|How prepared]]
 [[Sati stole your sausages|How prepared]]
 [[Quentin stole your sausages|How prepared]]
 [[Fran stole your sausages|How prepared]]
@@ -2878,7 +2875,7 @@ I finished the investigation, and...
 
 
 :: Win game [Success bg-kitchen char-eira] {"position":"2250,825","size":"100,100"}
-"We'll I've spoken to everyone, and you were fucking ''bang-on right about everything''. As much as I didn't want to believe it was you."
+"We'll I've spoken to everyone, and you were''bang-on right about everything''. As much as I didn't want to believe it was you."
 
 [["Are you mad at me?"]]
 
